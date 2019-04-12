@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Being Momin</string>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="sign_up_text">Want to be Ambassador? Apply</string>
+
+    <string name="ambassador_description"> 1. Only one ambassador associated with one locality. \n
+                                           2. Minimum qualification to be ambassador is 12th pass.\n
+                                           3. Ambassador will enter(provide) all details of persons of his locality.\n
+                                           4. Ambassador with enter latest news of his locality for site using portal.\n
+                                           5. They will able to edit to any information of any person using portal.\n
+                                           </string>
+</resources>

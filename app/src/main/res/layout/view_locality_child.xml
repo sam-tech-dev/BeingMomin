@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.beingmomin.mominapp.ui.localitySearch.LocalitySearchItemViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:onClick="@{viewModel::onClick}"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_5"
+            android:layout_height="wrap_content">
+
+
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:id="@+id/tv_mobile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black_tint5"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintStart_toEndOf="@+id/tv_mobile_tiltle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ambassador_name"
+                app:mutableText="@{viewModel.mobileNumber}" />
+
+
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:id="@+id/tv_mobile_tiltle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Mobile No.:"
+                android:textColor="@color/black_tint3"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintStart_toEndOf="@+id/br_image"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ambassador_tiltle" />
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewMedium
+                android:id="@+id/tv_locality_key_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+
+                app:mutableText="@{viewModel.localityName}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_18"
+                app:layout_constraintStart_toEndOf="@+id/br_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:id="@+id/tv_locality_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@+id/tv_locality_key_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:mutableText="@{viewModel.localityAddress}" />
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:id="@+id/tv_ambassador_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black_tint5"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintStart_toEndOf="@+id/tv_ambassador_tiltle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_locality_key_label"
+                app:mutableText="@{viewModel.name}" />
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:id="@+id/tv_ambassador_tiltle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Ambassador :"
+                android:textColor="@color/black_tint3"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintStart_toEndOf="@+id/br_image"
+                app:layout_constraintTop_toBottomOf="@+id/tv_locality_key_label" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_profile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="civ_profile" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
