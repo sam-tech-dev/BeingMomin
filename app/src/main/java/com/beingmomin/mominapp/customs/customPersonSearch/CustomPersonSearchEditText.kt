@@ -53,6 +53,7 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
         dialog.rcv_searched_persons.layoutManager=LinearLayoutManager(context)
         dialog.rcv_searched_persons.adapter=adapter
         dialog.show()
+
     }
 
 
