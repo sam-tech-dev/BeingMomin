@@ -11,6 +11,7 @@ import javax.inject.Singleton
 class AppApiHelper @Inject constructor(val apiHeader: ApiHeader) : ApiHelper {
 
 
+
 //    .addHeaders(apiHeader.apiToken)
 
     override fun doLoginApiCall(request: LoginApiBody): Single<SignInResponse> {
@@ -38,6 +39,14 @@ class AppApiHelper @Inject constructor(val apiHeader: ApiHeader) : ApiHelper {
                 .getObjectSingle<LocalityAmbassadorsResponse>(LocalityAmbassadorsResponse::class.java)
     }
 
+    override fun doSearchPersonApiCall(request: SearchPersonApiBody): Single<SearchPersonResponse> {
+
+        return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SEARCH_PERSONS)
+                .addApplicationJsonBody(request)
+                .addHeaders(apiHeader.apiToken)
+                .build()
+                .getObjectSingle<SearchPersonResponse>(SearchPersonResponse::class.java)
+   }
 
 
 

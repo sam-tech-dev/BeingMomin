@@ -11,4 +11,23 @@
                                            4. Ambassador with enter latest news of his locality for site using portal.\n
                                            5. They will able to edit to any information of any person using portal.\n
                                            </string>
+
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="add_person">Add Person</string>
+
+    <!--Drawer-->
+    <string name="open_drawer">Drawer Open</string>
+    <string name="close_drawer">Drawer Close</string>
+
+    <!--background-->
+    <color name="cyan_light">#c9ebee</color>
+    <color name="cyan">#b5e3e7</color>
+    <color name="cyan_dark">#70BDC6</color>
+    <color name="navy_blue">#214258</color>
+    <color name="navy_blue_dark">#1C3A4E</color>
+    <color name="red_dark">#F06423</color>
+    <color name="red_dark2">#D85A1B</color>
+
+
 </resources>

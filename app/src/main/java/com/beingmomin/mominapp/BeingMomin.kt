@@ -9,9 +9,7 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject
 
-/**
- * Created by amitshekhar on 07/07/17.
- */
+
 
 class BeingMomin : Application(), HasActivityInjector {
 

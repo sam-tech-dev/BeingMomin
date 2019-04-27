@@ -62,8 +62,7 @@
         <activity
             android:name=".ui.localitySearch.LocalitySearchActivity"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".test.Main2Activity" />
-        <activity android:name=".test.Main3Activity" />
+
     </application>
 
 </manifest>

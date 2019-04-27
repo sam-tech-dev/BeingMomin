@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
 
 
@@ -26,6 +27,29 @@
         <!-- <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>-->
     </style>
 
+    <style name="regularTextAppearance" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/gt_walsheim_regular</item>
+    </style>
+
+    <style name="mediumTextAppearance" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/gt_walsheim_medium</item>
+    </style>
+
+
+    <style name="titleTextAppearance" parent="mediumTextAppearance">
+        <item name="android:textSize">@dimen/dp_15</item>
+    </style>
+
+    <style name="subTitleTextAppearance" parent="regularTextAppearance">
+        <item name="android:textSize">@dimen/dp_12</item>
+    </style>
+
+
+
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

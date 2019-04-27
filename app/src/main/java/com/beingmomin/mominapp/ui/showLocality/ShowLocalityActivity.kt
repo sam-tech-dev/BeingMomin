@@ -1,8 +1,10 @@
 package com.beingmomin.mominapp.ui.showLocality
 
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProviders
 import com.beingmomin.mominapp.BR
 import com.beingmomin.mominapp.R
+import com.beingmomin.mominapp.ViewModelProviderFactory
 import com.beingmomin.mominapp.databinding.ActivityShowLocalityBinding
 import com.beingmomin.mominapp.ui.base.BaseActivity
 import javax.inject.Inject
@@ -10,6 +12,8 @@ import javax.inject.Inject
 class ShowLocalityActivity : BaseActivity<ActivityShowLocalityBinding, ShowLocalityViewModel>(), ShowLocalityNavigator {
 
     @Inject
+    lateinit var factory: ViewModelProviderFactory
+
     lateinit var showLocalityViewModel: ShowLocalityViewModel
 
     private lateinit var mActivityShowLocalityBinding: ActivityShowLocalityBinding
@@ -34,9 +38,11 @@ class ShowLocalityActivity : BaseActivity<ActivityShowLocalityBinding, ShowLocal
         get() = R.layout.activity_show_locality
 
     override val viewModel: ShowLocalityViewModel
-        get() = showLocalityViewModel
+        get() {
+            if(!::showLocalityViewModel.isInitialized){
+                showLocalityViewModel= ViewModelProviders.of(this, factory).get(ShowLocalityViewModel::class.java)
+            }
+            return showLocalityViewModel
+        }
 
-    override fun onResume() {
-        super.onResume()
-    }
 }

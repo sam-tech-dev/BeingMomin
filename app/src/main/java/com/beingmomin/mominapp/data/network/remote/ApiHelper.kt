@@ -8,8 +8,9 @@ interface ApiHelper {
 
     fun doLoginApiCall(request: LoginApiBody): Single<SignInResponse>
 
-
     fun doSignUpApiCall(request: SignUpApiBody): Single<SignUpResponse>
 
     fun doLocalityAmbassadorApiCall(): Single<LocalityAmbassadorsResponse>
+
+    fun doSearchPersonApiCall(request : SearchPersonApiBody): Single<SearchPersonResponse>
 }

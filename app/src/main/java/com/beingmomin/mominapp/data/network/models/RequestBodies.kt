@@ -14,3 +14,9 @@ data class SignUpApiBody(
 		@SerializedName("qualification") var qualification: String,
 		@SerializedName("address") var address: String
 )
+
+data class SearchPersonApiBody(
+		@SerializedName("searchName") var searchName: String,
+		@SerializedName("locality") var locality: String,
+		@SerializedName("gender") var gender: String
+)

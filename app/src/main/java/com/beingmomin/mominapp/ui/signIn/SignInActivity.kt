@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
 import com.beingmomin.mominapp.BR
 import com.beingmomin.mominapp.R
+import com.beingmomin.mominapp.ViewModelProviderFactory
 import com.beingmomin.mominapp.databinding.ActivitySignInBinding
 import com.beingmomin.mominapp.ui.ambassadorDescription.AmbassadorDescriptionActivity
 import com.beingmomin.mominapp.ui.base.BaseActivity
@@ -18,6 +20,8 @@ import javax.inject.Inject
 class SignInActivity : BaseActivity<ActivitySignInBinding, SignInViewModel>(), SignInNavigator {
 
     @Inject
+    lateinit var factory: ViewModelProviderFactory
+
     lateinit var signInViewModel: SignInViewModel
 
     lateinit var mActivitySignInBinding: ActivitySignInBinding
@@ -49,7 +53,12 @@ class SignInActivity : BaseActivity<ActivitySignInBinding, SignInViewModel>(), S
         get() = R.layout.activity_sign_in
 
     override val viewModel: SignInViewModel
-        get() = signInViewModel
+        get() {
+            if (!::signInViewModel.isInitialized) {
+                signInViewModel = ViewModelProviders.of(this, factory).get(SignInViewModel::class.java)
+            }
+            return signInViewModel
+        }
 
 
     companion object {
@@ -59,7 +68,7 @@ class SignInActivity : BaseActivity<ActivitySignInBinding, SignInViewModel>(), S
     }
 
     override fun handleError(throwable: Throwable) {
-        Toast.makeText(this, "error"+throwable.toString(),Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "error" + throwable.toString(), Toast.LENGTH_SHORT).show()
     }
 
     override fun openMainActivity() {

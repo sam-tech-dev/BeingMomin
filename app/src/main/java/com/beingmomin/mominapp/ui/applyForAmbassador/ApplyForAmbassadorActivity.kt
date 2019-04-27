@@ -4,24 +4,25 @@ import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
 import com.beingmomin.mominapp.BR
 import com.beingmomin.mominapp.R
-import com.beingmomin.mominapp.data.network.models.SignUpApiBody
+import com.beingmomin.mominapp.ViewModelProviderFactory
 import com.beingmomin.mominapp.databinding.ActivityApplyForAmbassadorBinding
 import com.beingmomin.mominapp.ui.base.BaseActivity
 import com.beingmomin.mominapp.utils.CommonUtils
 import io.reactivex.Observable
 import io.reactivex.functions.Function6
-import kotlinx.android.synthetic.main.activity_apply_for_ambassador.*
-import java.util.*
-import javax.inject.Inject
 import io.reactivex.observers.DisposableObserver
+import kotlinx.android.synthetic.main.activity_apply_for_ambassador.*
+import javax.inject.Inject
 
 
 class ApplyForAmbassadorActivity : BaseActivity<ActivityApplyForAmbassadorBinding, ApplyForAmbassadorViewModel>(), ApplyForAmbassadorNavigator {
 
     @Inject
+    lateinit var factory: ViewModelProviderFactory
+
     lateinit var applyForAmbassadorViewModel: ApplyForAmbassadorViewModel
 
     private lateinit var mActivityApplyForAmbassadorBinding: ActivityApplyForAmbassadorBinding
@@ -34,7 +35,12 @@ class ApplyForAmbassadorActivity : BaseActivity<ActivityApplyForAmbassadorBindin
         get() = R.layout.activity_apply_for_ambassador
 
     override val viewModel: ApplyForAmbassadorViewModel
-        get() = applyForAmbassadorViewModel
+        get() {
+            if (!::applyForAmbassadorViewModel.isInitialized) {
+                applyForAmbassadorViewModel = ViewModelProviders.of(this, factory).get(ApplyForAmbassadorViewModel::class.java)
+            }
+            return applyForAmbassadorViewModel
+        }
 
 
     @SuppressLint("MissingPermission")
@@ -44,13 +50,13 @@ class ApplyForAmbassadorActivity : BaseActivity<ActivityApplyForAmbassadorBindin
         viewModel.setNavigator(this)
         mActivityApplyForAmbassadorBinding = getViewDataBinding()
 
-          var serial = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-              android.os.Build.getSerial()
-          } else {
-              android.os.Build.SERIAL
-          }
+        var serial = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            android.os.Build.getSerial()
+        } else {
+            android.os.Build.SERIAL
+        }
 
-        Log.d("az","Serial No.: "+serial)
+        Log.d("az", "Serial No.: " + serial)
 
 
         Observable.combineLatest(CommonUtils.edittextToObservable(et_first_name), CommonUtils.edittextToObservable(et_last_name),

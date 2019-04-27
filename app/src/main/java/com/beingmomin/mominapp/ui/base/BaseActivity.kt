@@ -5,18 +5,17 @@ import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import android.os.Build
 import android.os.Bundle
-import androidx.annotation.LayoutRes
-import androidx.appcompat.app.AppCompatActivity
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.annotation.LayoutRes
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
+import com.beingmomin.mominapp.ui.signIn.SignInActivity
 import com.beingmomin.mominapp.utils.CommonUtils
 import com.beingmomin.mominapp.utils.NetworkUtils
-import com.beingmomin.mominapp.ui.signIn.SignInActivity
-import com.google.android.material.snackbar.Snackbar
 import dagger.android.AndroidInjection
 
 
@@ -24,7 +23,7 @@ import dagger.android.AndroidInjection
  * Created by amitshekhar on 07/07/17.
  */
 
-abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>> : AppCompatActivity() {
+abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>> : AppCompatActivity(), BaseFragment.Callback {
 
     // TODO
     // this can probably depend on isLoading variable of BaseViewModel,
@@ -33,7 +32,7 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>> : AppComp
 
     private var mProgressDialog: ProgressDialog? = null
 
-    private lateinit  var viewDataBinding: T
+    private lateinit var viewDataBinding: T
 
     private var mViewModel: V? = null
 
@@ -56,8 +55,6 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>> : AppComp
      * @return view model instance
      */
     abstract val viewModel: V
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -101,7 +98,7 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>> : AppComp
         finish()
     }
 
-   private fun performDependencyInjection() {
+    private fun performDependencyInjection() {
         AndroidInjection.inject(this)
     }
 
@@ -119,8 +116,8 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>> : AppComp
     }
 
 
-    fun showToast(msg: String){
-        Toast.makeText(this,msg,Toast.LENGTH_LONG).show()
+    fun showToast(msg: String) {
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
     }
 
 
@@ -129,6 +126,15 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>> : AppComp
         this.mViewModel = if (mViewModel == null) viewModel else mViewModel
         viewDataBinding!!.setVariable(bindingVariable, mViewModel)
         viewDataBinding!!.executePendingBindings()
+    }
+
+
+    override fun onFragmentAttached() {
+
+    }
+
+    override fun onFragmentDetached(tag: String) {
+        supportFragmentManager.popBackStack(tag,0)
     }
 }
 

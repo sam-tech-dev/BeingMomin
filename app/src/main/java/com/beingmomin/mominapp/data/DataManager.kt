@@ -1,11 +1,8 @@
 package com.beingmomin.mominapp.data
 
-import com.beingmomin.mominapp.data.preferences.AppPreferencesHelper
-import com.beingmomin.mominapp.data.network.models.LocalityAmbassadorsResponse
-import com.beingmomin.mominapp.data.network.models.LoginApiBody
-import com.beingmomin.mominapp.data.network.models.SignUpApiBody
-import com.beingmomin.mominapp.data.network.models.SignUpResponse
+import com.beingmomin.mominapp.data.network.models.*
 import com.beingmomin.mominapp.data.network.remote.AppApiHelper
+import com.beingmomin.mominapp.data.preferences.AppPreferencesHelper
 import io.reactivex.Single
 import javax.inject.Inject
 
@@ -45,6 +42,10 @@ class DataManager @Inject constructor( private  val appPrefHelper: AppPreference
     override fun doSignUpApiCall(request:  SignUpApiBody): Single<SignUpResponse> = apiHelper.doSignUpApiCall(request)
 
     override fun doLocalityAmbassadorApiCall(): Single<LocalityAmbassadorsResponse> = apiHelper.doLocalityAmbassadorApiCall()
+
+    override fun doSearchPersonApiCall(request: SearchPersonApiBody): Single<SearchPersonResponse> = apiHelper.doSearchPersonApiCall(request)
+
+
     /**
      * end of api call functions
      */

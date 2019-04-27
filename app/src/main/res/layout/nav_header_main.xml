@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.beingmomin.mominapp.ui.main.MainActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.beingmomin.mominapp.ui.main.MainViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_design"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_pic"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_profile" />
+
+        <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Sattar Mohammad" />
+
+        <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sattar78692md@gmail.com" />
+
+    </LinearLayout>
+
+</layout>

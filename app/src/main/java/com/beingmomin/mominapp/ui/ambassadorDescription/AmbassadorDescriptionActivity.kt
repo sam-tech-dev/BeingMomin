@@ -2,17 +2,21 @@ package com.beingmomin.mominapp.ui.ambassadorDescription
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProviders
 import com.beingmomin.mominapp.BR
 import com.beingmomin.mominapp.R
+import com.beingmomin.mominapp.ViewModelProviderFactory
 import com.beingmomin.mominapp.databinding.ActivityAmbassadorDescriptionBinding
-import com.beingmomin.mominapp.ui.localitySearch.LocalitySearchActivity
 import com.beingmomin.mominapp.ui.base.BaseActivity
+import com.beingmomin.mominapp.ui.localitySearch.LocalitySearchActivity
 import javax.inject.Inject
 
 class AmbassadorDescriptionActivity : BaseActivity<ActivityAmbassadorDescriptionBinding, AmbassadorDescriptionViewModel>(),AmbassadorDescriptionNavigator{
 
 
     @Inject
+    lateinit var factory: ViewModelProviderFactory
+
     lateinit var ambassadorDescriptionViewModel: AmbassadorDescriptionViewModel
 
     private lateinit var mActivityAmbassadorDescriptionBinding: ActivityAmbassadorDescriptionBinding
@@ -31,7 +35,12 @@ class AmbassadorDescriptionActivity : BaseActivity<ActivityAmbassadorDescription
         get() = R.layout.activity_ambassador_description
 
     override val viewModel: AmbassadorDescriptionViewModel
-        get() = ambassadorDescriptionViewModel
+        get() {
+            if (!::ambassadorDescriptionViewModel.isInitialized) {
+                ambassadorDescriptionViewModel= ViewModelProviders.of(this, factory).get(AmbassadorDescriptionViewModel::class.java)
+            }
+            return ambassadorDescriptionViewModel
+        }
 
 
     override fun openSearchLocalityActivity() {

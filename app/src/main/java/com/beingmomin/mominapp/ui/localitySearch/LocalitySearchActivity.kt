@@ -2,26 +2,27 @@ package com.beingmomin.mominapp.ui.localitySearch
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
 import android.text.TextWatcher
-import androidx.recyclerview.widget.LinearLayoutManager
 import android.util.Log
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.beingmomin.mominapp.BR
 import com.beingmomin.mominapp.R
+import com.beingmomin.mominapp.ViewModelProviderFactory
 import com.beingmomin.mominapp.databinding.ActivitySearchLocalityBinding
+import com.beingmomin.mominapp.ui.applyForAmbassador.ApplyForAmbassadorActivity
 import com.beingmomin.mominapp.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_search_locality.*
 import javax.inject.Inject
-import androidx.databinding.adapters.TextViewBindingAdapter.setText
-import android.text.Editable
-import com.beingmomin.mominapp.ui.applyForAmbassador.ApplyForAmbassadorActivity
-import com.beingmomin.mominapp.ui.showLocality.ShowLocalityActivity
 
 
 class LocalitySearchActivity : BaseActivity<ActivitySearchLocalityBinding,LocalitySearchViewModel>() , LocalitySearchNavigator{
 
-
     @Inject
+    lateinit var factory: ViewModelProviderFactory
+
     lateinit var localitySearchViewModel: LocalitySearchViewModel
 
     private lateinit var mActivityLocalitySearchBinding: ActivitySearchLocalityBinding
@@ -64,7 +65,12 @@ class LocalitySearchActivity : BaseActivity<ActivitySearchLocalityBinding,Locali
 
 
     override val viewModel: LocalitySearchViewModel
-        get() = localitySearchViewModel
+        get() {
+            if(!::localitySearchViewModel.isInitialized){
+                localitySearchViewModel= ViewModelProviders.of(this, factory).get(LocalitySearchViewModel::class.java)
+            }
+            return localitySearchViewModel
+        }
 
 
     override fun handleError(throwable: Throwable) {

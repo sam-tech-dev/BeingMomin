@@ -20,16 +20,19 @@ android {
     dataBinding {
         enabled = true
     }
+    kapt {
+        generateStubs = true
+    }
 
     buildTypes {
         debug {
             buildConfigField("String", "environment", "\"development\"")
 
             //office local url
-            //buildConfigField("String", "BASE_URL", "\"http://172.20.5.80:8000/\"")
+            buildConfigField("String", "BASE_URL", "\"http://172.20.5.47:8000/\"")
 
             //PG local url
-            buildConfigField("String", "BASE_URL", "\"http://192.168.8.8:8000/\"")
+            //buildConfigField("String", "BASE_URL", "\"http://192.168.8.8:8000/\"")
 
             buildConfigField("String", "API_EXT", "\"AmbassadorPortal/\"")
 
@@ -88,13 +91,16 @@ dependencies {
     // dependency injection
     implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
     implementation "com.google.dagger:dagger-android:$rootProject.dagger2Version"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
+
     kapt "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
     kapt "com.google.dagger:dagger-android-processor:$rootProject.dagger2Version"
-    kapt "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
 
     // reactive
     implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
     implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+
+    implementation "com.github.ganfra:material-spinner:$rootProject.materialSpinnerVersion"
 
 
     testImplementation 'junit:junit:4.12'
