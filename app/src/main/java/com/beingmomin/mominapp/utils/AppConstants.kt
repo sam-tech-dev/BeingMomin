@@ -22,6 +22,8 @@ object AppConstants {
 
     val API_STATUS_CODE_LOCAL_ERROR = 0
 
+    val APP_TAG = "BeingMomin"
+
     val DB_NAME = "mindorks_mvvm.db"
 
     val NULL_INDEX = -1L

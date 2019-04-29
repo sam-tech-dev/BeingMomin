@@ -7,13 +7,22 @@ import android.util.AttributeSet
 import android.util.Log
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.beingmomin.mominapp.BeingMomin
 import com.beingmomin.mominapp.R
+import com.beingmomin.mominapp.data.network.models.SearchPersonApiBody
+import com.beingmomin.mominapp.utils.AppConstants
+import com.beingmomin.mominapp.utils.rx.AppSchedulerProvider
+import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.layout_person_search_dialog.*
 
 
 class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
 
-    var adapter = ShowPersonAdapter()
+    var adapter = ShowPersonAdapter(this)
+    val schedulerProvider = AppSchedulerProvider()
+    lateinit var locality: String
+    lateinit var gender: String
+    lateinit var title: String
 
     constructor(context: Context) : super(context) {
         this.typeface = Typeface.createFromAsset(context.assets, "fonts/GT-Walsheim-Regular.ttf")
@@ -35,13 +44,19 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
 
     fun createDialog(context: Context) {
 
+        val searchPersonApiBody = SearchPersonApiBody("", locality, gender)
         val dialog = Dialog(context)
         dialog.setContentView(R.layout.layout_person_search_dialog)
-        dialog.setTitle("Search Father's Name")
+        dialog.setTitle("Search " + title)
+        val wmlp = dialog.window!!.attributes
+        wmlp.width = android.view.ViewGroup.LayoutParams.MATCH_PARENT
+        wmlp.height = android.view.ViewGroup.LayoutParams.MATCH_PARENT
+
         dialog.et_search_text.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                Log.d("'az", "query :" + query)
+            override fun onQueryTextSubmit(query: String): Boolean {
+                searchPersonApiBody.searchName = query
+                searchPerson(searchPersonApiBody)
                 return false
             }
 
@@ -50,36 +65,29 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
             }
         })
 
-        dialog.rcv_searched_persons.layoutManager=LinearLayoutManager(context)
-        dialog.rcv_searched_persons.adapter=adapter
-        dialog.show()
+        dialog.rcv_searched_persons.layoutManager = LinearLayoutManager(context)
+        adapter.dialog = dialog
+        dialog.rcv_searched_persons.adapter = adapter
 
+        dialog.show()
     }
 
 
-   /* fun searchPerson() {
-        getCompositeDisposable().add(dataManager.doLocalityAmbassadorApiCall()
+    fun searchPerson(request: SearchPersonApiBody) {
+
+        CompositeDisposable().add(BeingMomin.getInstance().dataManager.doSearchPersonApiCall(request)
                 .doOnSuccess({ response ->
-                    log(response.toString())
+                    Log.d(AppConstants.APP_TAG, response.toString())
                 })
-                .subscribeOn(getSchedulerProvider().io())
-                .observeOn(getSchedulerProvider().ui())
+                .subscribeOn(schedulerProvider.io())
+                .observeOn(schedulerProvider.ui())
                 .subscribe({ response ->
-                    setIsLoading(false)
-                    // openMainActivity()
-                    listOfLocalities=response.ambassadors
-                    localitySearchAdapter.updateLocalityList(response.ambassadors)
+                    adapter.updatePersonList(response.persons)
 
                 }, { throwable ->
-                    setIsLoading(false)
-                    log(throwable.toString())
-                    getNavigator()!!.handleError(throwable)
+                    Log.d(AppConstants.APP_TAG, throwable.toString())
                 }))
-    }*/
-
-
-
-
+    }
 
 
 }

@@ -5,18 +5,16 @@
     tools:context=".ui.splash.SplashActivity">
 
     <data>
-
         <import type="android.view.View" />
-
         <variable
             name="viewModel"
             type="com.beingmomin.mominapp.customs.customPersonSearch.ShowPersonItemViewModel" />
-
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         app:cardUseCompatPadding="true"
+        android:id="@+id/cv_person"
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout

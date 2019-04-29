@@ -13,6 +13,7 @@ class AppPreferencesHelper @Inject constructor(var appPref: AppPreferences) : Pr
         const val PREF_KEY_ACCESS_TOKEN = "token"
         const val PREF_KEY_IS_LOGIN = "isLogin"
         const val PREF_KEY_USER_NAME = "username"
+        const val PREF_KEY_LOCALITY = "locality"
     }
 
     override fun setAccessToken(accessToken: String) = appPref.storePreferences(PREF_KEY_ACCESS_TOKEN, accessToken)
@@ -33,6 +34,14 @@ class AppPreferencesHelper @Inject constructor(var appPref: AppPreferences) : Pr
 
     override fun getIsLogin(): Boolean {
         return appPref.fetchPreferences(PREF_KEY_IS_LOGIN, false)
+    }
+
+    override fun setLocality(locality: String) {
+        appPref.storePreferences(PREF_KEY_LOCALITY, locality)
+    }
+
+    override fun getLocality(): String {
+        return appPref.fetchPreferences(PREF_KEY_LOCALITY, "")
     }
 
 

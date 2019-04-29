@@ -1,5 +1,6 @@
 package com.beingmomin.mominapp.customs.customPersonSearch
 
+import android.app.Dialog
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,10 +11,11 @@ import com.beingmomin.mominapp.data.network.models.Person
 import com.beingmomin.mominapp.databinding.LayoutPersonShowBinding
 
 
-class ShowPersonAdapter constructor() : RecyclerView.Adapter<ShowPersonAdapter.viewHolder>() {
+class ShowPersonAdapter constructor(val searchEditText: CustomPersonSearchEditText) : RecyclerView.Adapter<ShowPersonAdapter.viewHolder>() {
 
     lateinit var context: Context
     lateinit  var listOfPersons:List<Person>
+    lateinit var dialog: Dialog
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         context=parent.context
@@ -27,7 +29,13 @@ class ShowPersonAdapter constructor() : RecyclerView.Adapter<ShowPersonAdapter.v
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-        holder.bind(listOfPersons.get(position))
+        val person=listOfPersons.get(position)
+        holder.bind(person)
+        holder.binding.cvPerson.setOnClickListener {
+            searchEditText.setText(person.name)
+            searchEditText.tag=person.id
+            dialog.dismiss()
+        }
     }
 
     fun updatePersonList(personList:MutableList<Person>){

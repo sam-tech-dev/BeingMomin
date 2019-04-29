@@ -98,22 +98,24 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:text="Male"
-                    android:checked="true"
-                    android:textColor="@color/brown"
-                    android:textSize="@dimen/dp_15"
-                    android:textAppearance="@style/regularTextAppearance"
-                    android:layout_height="wrap_content" />
-
-                <RadioButton
+                    android:id="@+id/rb_male"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="female"
+                    android:checked="true"
+                    android:text="Male"
+                    android:textAppearance="@style/regularTextAppearance"
                     android:textColor="@color/brown"
+                    android:textSize="@dimen/dp_15" />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
+                    android:text="female"
                     android:textAppearance="@style/regularTextAppearance"
+                    android:textColor="@color/brown"
                     android:textSize="@dimen/dp_15" />
 
             </RadioGroup>
@@ -242,11 +244,112 @@
                     android:textSize="@dimen/dp_15"
                     android:focusableInTouchMode="false"
                     android:layout_height="wrap_content"
-
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/sp_marital_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_mother_name"
+                app:ms_arrowColor="@color/brown_tint1"
+                app:ms_arrowSize="16dp"
+                app:ms_baseColor="@color/spinner_base_color"
+                app:ms_enableErrorLabel="false"
+                app:ms_enableFloatingLabel="true"
+                app:ms_errorColor="@color/red_dark"
+                app:ms_floatingLabelColor="@color/brown_tint1"
+                app:ms_floatingLabelText="Select Marital Status"
+                app:ms_hint="Select Marital Status"
+                app:ms_hintColor="@color/brown_tint1"
+                app:ms_multiline="false"
+                app:ms_thickness="1dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_parner_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:visibility="gone"
+                android:hint="Enter life partner's name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sp_marital_status">
+
+                <com.beingmomin.mominapp.customs.customPersonSearch.CustomPersonSearchEditText
+                    android:id="@+id/et_partner_name"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/dp_15"
+                    android:focusableInTouchMode="false"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/sp_education_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_parner_name"
+                app:ms_arrowColor="@color/brown_tint1"
+                app:ms_arrowSize="16dp"
+                app:ms_baseColor="@color/spinner_base_color"
+                app:ms_enableErrorLabel="false"
+                app:ms_enableFloatingLabel="true"
+                app:ms_errorColor="@color/red_dark"
+                app:ms_floatingLabelColor="@color/brown_tint1"
+                app:ms_floatingLabelText="Select education level"
+                app:ms_hint="Select education level"
+                app:ms_hintColor="@color/brown_tint1"
+                app:ms_multiline="false"
+                app:ms_thickness="1dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_qualification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter Qualification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sp_education_level">
+
+                <com.beingmomin.mominapp.customs.customEditText.CustomEditTextRegular
+                    android:id="@+id/et_qualification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:text="@={viewModel.qualification}"
+                    android:minLines="2"
+                    android:textSize="@dimen/dp_15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
 
@@ -262,7 +365,7 @@
                 android:hint="Enter Locality"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_mother_name">
+                app:layout_constraintTop_toBottomOf="@+id/til_qualification">
 
                 <com.beingmomin.mominapp.customs.customEditText.CustomEditTextRegular
                     android:id="@+id/et_locality_key"
@@ -274,31 +377,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_qualification"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:hint="Enter Qualification"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_locality_key">
-
-                <com.beingmomin.mominapp.customs.customEditText.CustomEditTextRegular
-                    android:id="@+id/et_qualification"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="top"
-                    android:text="@={viewModel.qualification}"
-                    android:minLines="2"
-                    android:textSize="@dimen/dp_15" />
-
-            </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -313,7 +391,7 @@
                 android:hint="Enter Home Address"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_qualification">
+                app:layout_constraintTop_toBottomOf="@+id/til_locality_key">
 
                 <com.beingmomin.mominapp.customs.customEditText.CustomEditTextRegular
                     android:id="@+id/et_home_address"
@@ -325,6 +403,156 @@
                     android:textSize="@dimen/dp_15" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:layout_width="wrap_content"
+                android:text="Is Alive :"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"
+                android:textSize="@dimen/dp_15"
+                android:id="@+id/tv_alive_flag_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/rg_is_alive"
+                app:layout_constraintTop_toBottomOf="@+id/til_home_address"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/rg_is_alive"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="8dp"
+                app:layout_constraintStart_toEndOf="@id/tv_alive_flag_label"
+                app:layout_constraintTop_toBottomOf="@+id/til_home_address"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Yes"
+                    android:textAppearance="@style/regularTextAppearance"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/dp_15" />
+
+                <RadioButton
+                    android:id="@+id/rb_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="No"
+                    android:textAppearance="@style/regularTextAppearance"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/dp_15" />
+
+            </RadioGroup>
+
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/sp_profession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_alive_flag_label"
+                app:ms_arrowColor="@color/brown_tint1"
+                app:ms_arrowSize="16dp"
+                app:ms_baseColor="@color/spinner_base_color"
+                app:ms_enableErrorLabel="false"
+                app:ms_enableFloatingLabel="true"
+                app:ms_errorColor="@color/red_dark"
+                app:ms_floatingLabelColor="@color/brown_tint1"
+                app:ms_floatingLabelText="Select profession"
+                app:ms_hint="Select professional"
+                app:ms_hintColor="@color/brown_tint1"
+                app:ms_multiline="false"
+                app:ms_thickness="1dp"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_profession"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:visibility="gone"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter Profession"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sp_profession">
+
+                <com.beingmomin.mominapp.customs.customEditText.CustomEditTextRegular
+                    android:id="@+id/et_profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@={viewModel.address}"
+                    android:textSize="@dimen/dp_15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:layout_width="wrap_content"
+                android:text="Attach profile Image :"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="8dp"
+                android:textSize="@dimen/dp_15"
+                android:id="@+id/tv_attach_profile_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/bt_browse_image"
+                app:layout_constraintTop_toBottomOf="@+id/til_profession"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/bt_browse_image"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:background="@color/colorSecondary"
+                android:text="Browse"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_12"
+                app:layout_constraintStart_toEndOf="@id/tv_attach_profile_label"
+                app:layout_constraintTop_toBottomOf="@+id/til_profession" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:id="@+id/iv_attached_profile"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_attach_profile_label"
+                android:layout_height="100dp" />
+
 
             <Button
                 android:id="@+id/bt_submit"
@@ -340,8 +568,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_home_address" />
-
+                app:layout_constraintTop_toBottomOf="@+id/iv_attached_profile" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

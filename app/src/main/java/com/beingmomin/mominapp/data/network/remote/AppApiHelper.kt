@@ -43,7 +43,6 @@ class AppApiHelper @Inject constructor(val apiHeader: ApiHeader) : ApiHelper {
 
         return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SEARCH_PERSONS)
                 .addApplicationJsonBody(request)
-                .addHeaders(apiHeader.apiToken)
                 .build()
                 .getObjectSingle<SearchPersonResponse>(SearchPersonResponse::class.java)
    }

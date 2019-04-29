@@ -15,4 +15,8 @@ interface PreferencesHelper {
     fun setIsLoginFlag(flag: Boolean)
     fun getIsLogin(): Boolean
 
+
+    fun setLocality(locality: String)
+    fun getLocality(): String
+
 }

@@ -5,7 +5,7 @@ import com.beingmomin.mominapp.data.DataManager
 import com.beingmomin.mominapp.ui.base.BaseViewModel
 import com.beingmomin.mominapp.utils.rx.SchedulerProvider
 
-class AddPersonViewModel(dataManager: DataManager, schedulerProvider: SchedulerProvider) : BaseViewModel<AddPersonNavigator>(schedulerProvider) {
+class AddPersonViewModel(val dataManager: DataManager, schedulerProvider: SchedulerProvider) : BaseViewModel<AddPersonNavigator>(schedulerProvider) {
 
 
     var firstName = MutableLiveData<String>()
@@ -23,10 +23,17 @@ class AddPersonViewModel(dataManager: DataManager, schedulerProvider: SchedulerP
         email.value=""
         qualification.value=""
         address.value=""
+
     }
 
 
     fun onNavBackClick() {
         getNavigator()?.goBack()
     }
+
+
+    fun setLocality(){
+        getNavigator()!!.setLocality(dataManager.getLocality())
+    }
+
 }

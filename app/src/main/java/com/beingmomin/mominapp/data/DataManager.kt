@@ -13,7 +13,6 @@ import javax.inject.Inject
 class DataManager @Inject constructor( private  val appPrefHelper: AppPreferencesHelper,
                                       private val apiHelper: AppApiHelper) : dtManager {
 
-
     /**
      * start of shared preferences functions
      */
@@ -28,6 +27,10 @@ class DataManager @Inject constructor( private  val appPrefHelper: AppPreference
     override fun setIsLoginFlag(flag: Boolean)=appPrefHelper.setIsLoginFlag(flag)
 
     override fun getIsLogin(): Boolean=appPrefHelper.getIsLogin()
+
+    override fun setLocality(locality: String) = appPrefHelper.setLocality(locality)
+
+    override fun getLocality(): String = appPrefHelper.getLocality()
 
     /**
      * end of shared preferences functions

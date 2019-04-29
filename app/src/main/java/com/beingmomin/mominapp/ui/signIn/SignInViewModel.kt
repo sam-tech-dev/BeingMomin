@@ -1,11 +1,11 @@
 package com.beingmomin.mominapp.ui.signIn
 
 import android.text.TextUtils
-import com.beingmomin.mominapp.utils.CommonUtils
-import com.beingmomin.mominapp.utils.rx.SchedulerProvider
 import com.beingmomin.mominapp.data.DataManager
 import com.beingmomin.mominapp.data.network.models.LoginApiBody
 import com.beingmomin.mominapp.ui.base.BaseViewModel
+import com.beingmomin.mominapp.utils.CommonUtils
+import com.beingmomin.mominapp.utils.rx.SchedulerProvider
 
 
 class SignInViewModel constructor(var dataManager: DataManager,  schedulerProvider: SchedulerProvider): BaseViewModel<SignInNavigator>(schedulerProvider) {
@@ -42,6 +42,7 @@ class SignInViewModel constructor(var dataManager: DataManager,  schedulerProvid
                     when(response.status){
                         0 -> {
                             dataManager.setAccessToken(response.token)
+                            dataManager.setLocality(response.locality)
                             dataManager.setIsLoginFlag(true)
                             openMainActivity()
                         }
