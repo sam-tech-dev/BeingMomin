@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.ambassadorDescription.AmbassadorDescriptionActivity">
+    tools:context=".ui.ambassadorModule.ambassadorDescription.AmbassadorDescriptionActivity">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="com.beingmomin.mominapp.ui.ambassadorDescription.AmbassadorDescriptionViewModel" />
+            type="com.beingmomin.mominapp.ui.ambassadorModule.ambassadorDescription.AmbassadorDescriptionViewModel" />
     </data>
 
 

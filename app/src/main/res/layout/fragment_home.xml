@@ -7,7 +7,7 @@
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.beingmomin.mominapp.ui.main.fragments.home.HomeViewModel" />
+            type="com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

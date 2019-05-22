@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.appModule.dashboard.DashboardActivity">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.beingmomin.mominapp.ui.appModule.dashboard.DashboardViewModel" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+
+        android:id="@+id/drawer_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/clRootView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false">
+
+            <LinearLayout
+                android:id="@+id/activityMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:elevation="5dp">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/tb_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        app:subtitle="Think Different"
+                        app:subtitleTextAppearance="@style/subTitleTextAppearance"
+                        app:subtitleTextColor="@color/white"
+                        app:title="@string/app_name"
+                        app:titleTextAppearance="@style/titleTextAppearance"
+                        app:titleTextColor="@color/white" />
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view_dashboard"
+            style="@style/Widget.Design.NavigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            app:itemBackground="@color/white"
+            app:itemIconTint="@color/black_effective"
+            app:itemTextColor="@color/black_effective"
+            app:menu="@menu/ambassador_drawer">
+
+            <TextView
+                android:id="@+id/tvAppVersion"
+                style="@style/regularTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:padding="5dp"
+                android:text="version : 1.0" />
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

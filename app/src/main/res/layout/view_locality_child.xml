@@ -7,7 +7,7 @@
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.beingmomin.mominapp.ui.localitySearch.LocalitySearchItemViewModel" />
+            type="com.beingmomin.mominapp.ui.ambassadorModule.localitySearch.LocalitySearchItemViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -83,8 +83,10 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="4dp"
+                android:ellipsize="end"
                 android:textColor="@color/black_tint5"
                 android:textSize="@dimen/dp_16"
+                android:singleLine="true"
                 app:layout_constraintStart_toEndOf="@+id/tv_ambassador_tiltle"
                 app:layout_constraintTop_toBottomOf="@+id/tv_locality_key_label"
                 app:mutableText="@{viewModel.name}" />
@@ -106,7 +108,7 @@
                 android:id="@+id/civ_profile"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_profile"
+                app:bindImageUrl="@{viewModel.profileUrl}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

@@ -44,7 +44,10 @@
         <item name="android:textSize">@dimen/dp_12</item>
     </style>
 
+    <style name="progressBarStyle" parent="@style/Theme.AppCompat">
+        <item name="colorAccent">@color/colorPrimary</item>
 
+    </style>
 
 
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">

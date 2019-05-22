@@ -29,10 +29,10 @@ android {
             buildConfigField("String", "environment", "\"development\"")
 
             //office local url
-           // buildConfigField("String", "BASE_URL", "\"http://172.20.5.92:8000/\"")
+            buildConfigField("String", "BASE_URL", "\"http://172.20.5.152:8000/\"")
 
             //PG local url
-            buildConfigField("String", "BASE_URL", "\"http://192.168.8.19:8000/\"")
+            //buildConfigField("String", "BASE_URL", "\"http://192.168.8.19:8000/\"")
 
             buildConfigField("String", "API_EXT", "\"AmbassadorPortal/\"")
 

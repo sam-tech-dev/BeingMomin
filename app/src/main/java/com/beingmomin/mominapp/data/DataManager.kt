@@ -4,6 +4,7 @@ import com.beingmomin.mominapp.data.network.models.*
 import com.beingmomin.mominapp.data.network.remote.AppApiHelper
 import com.beingmomin.mominapp.data.preferences.AppPreferencesHelper
 import io.reactivex.Single
+import java.io.File
 import javax.inject.Inject
 
 
@@ -32,6 +33,8 @@ class DataManager @Inject constructor( private  val appPrefHelper: AppPreference
 
     override fun getLocality(): String = appPrefHelper.getLocality()
 
+    override fun clearAppPreferences() = appPrefHelper.clearAppPreferences()
+
     /**
      * end of shared preferences functions
      */
@@ -48,6 +51,9 @@ class DataManager @Inject constructor( private  val appPrefHelper: AppPreference
 
     override fun doSearchPersonApiCall(request: SearchPersonApiBody): Single<SearchPersonResponse> = apiHelper.doSearchPersonApiCall(request)
 
+    override fun doAddPersonApiCall(request: AddPersonApiBody, profileFile: File): Single<AddPersonResponse> = apiHelper.doAddPersonApiCall(request,profileFile)
+
+    override fun doGetLocalitiesApiCall(): Single<GetLocalitiesResponse> = apiHelper.doGetLocalitiesApiCall()
 
     /**
      * end of api call functions

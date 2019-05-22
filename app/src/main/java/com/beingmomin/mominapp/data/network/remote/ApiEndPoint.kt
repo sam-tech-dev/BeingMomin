@@ -13,4 +13,8 @@ object ApiEndPoint {
 
    const val ENDPOINT_SEARCH_PERSONS = BuildConfig.BASE_URL + BuildConfig.API_EXT + "search-person"
 
+   const val ENDPOINT_ADD_PERSONS = BuildConfig.BASE_URL + BuildConfig.API_EXT + "add-person"
+
+   const val ENDPOINT_GET_LOCALITIES = BuildConfig.BASE_URL + BuildConfig.API_EXT + "get-localities"
+
 }

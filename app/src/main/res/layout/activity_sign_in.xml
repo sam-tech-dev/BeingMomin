@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.signIn.SignInActivity">
+    tools:context=".ui.ambassadorModule.signIn.SignInActivity">
 
     <data>
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.beingmomin.mominapp.ui.signIn.SignInViewModel" />
+            type="com.beingmomin.mominapp.ui.ambassadorModule.signIn.SignInViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -138,7 +138,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:elevation="2dp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="388dp" />
+             />
 
         <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
             android:id="@+id/tv_error_msg"

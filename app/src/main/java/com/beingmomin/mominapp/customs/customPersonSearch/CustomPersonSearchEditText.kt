@@ -2,10 +2,16 @@ package com.beingmomin.mominapp.customs.customPersonSearch
 
 import android.app.Dialog
 import android.content.Context
+import android.graphics.PorterDuff
 import android.graphics.Typeface
 import android.util.AttributeSet
 import android.util.Log
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.ProgressBar
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.beingmomin.mominapp.BeingMomin
 import com.beingmomin.mominapp.R
@@ -23,6 +29,7 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
     lateinit var locality: String
     lateinit var gender: String
     lateinit var title: String
+    var localityList = mutableListOf<String>()
 
     constructor(context: Context) : super(context) {
         this.typeface = Typeface.createFromAsset(context.assets, "fonts/GT-Walsheim-Regular.ttf")
@@ -52,11 +59,63 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
         wmlp.width = android.view.ViewGroup.LayoutParams.MATCH_PARENT
         wmlp.height = android.view.ViewGroup.LayoutParams.MATCH_PARENT
 
+        dialog.pb_search_progress.getIndeterminateDrawable()
+                .setColorFilter(ContextCompat.getColor(context, R.color.colorPrimary), PorterDuff.Mode.SRC_IN )
+
+
+
+        localityList.clear()
+        localityList.add(locality)
+        val localityAdapter = ArrayAdapter<String>(context!!, android.R.layout.simple_spinner_item, localityList)
+        localityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        dialog.sp_locality.setAdapter(localityAdapter)
+
+        dialog.sp_locality.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                //
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                if (position >= 0) {
+                    locality= localityList.get(position)
+                }
+            }
+        })
+
+        dialog.sp_locality.setSelection(1)
+
+
+        val genderList = arrayOf("Male", "Female")
+        val genderAdapter = ArrayAdapter<String>(context!!, android.R.layout.simple_spinner_item, genderList)
+        genderAdapter .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        dialog.sp_gender.setAdapter(genderAdapter)
+        dialog.sp_gender.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                //
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                if (position >= 0) {
+                     gender = genderList.get(position)
+
+                }
+            }
+        })
+
+        if(gender.equals("Male",true)){
+            dialog.sp_gender.setSelection(1)
+        }else{
+            dialog.sp_gender.setSelection(2)
+        }
+
         dialog.et_search_text.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
             override fun onQueryTextSubmit(query: String): Boolean {
+                dialog.pb_search_progress.visibility= View.VISIBLE
                 searchPersonApiBody.searchName = query
-                searchPerson(searchPersonApiBody)
+                searchPersonApiBody.locality=locality
+                searchPersonApiBody.gender=gender
+                searchPerson(searchPersonApiBody,dialog.pb_search_progress)
                 return false
             }
 
@@ -66,14 +125,14 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
         })
 
         dialog.rcv_searched_persons.layoutManager = LinearLayoutManager(context)
-        adapter.dialog = dialog
+        adapter = ShowPersonAdapter(this)
         dialog.rcv_searched_persons.adapter = adapter
 
         dialog.show()
     }
 
 
-    fun searchPerson(request: SearchPersonApiBody) {
+    fun searchPerson(request: SearchPersonApiBody, progressBar: ProgressBar) {
 
         CompositeDisposable().add(BeingMomin.getInstance().dataManager.doSearchPersonApiCall(request)
                 .doOnSuccess({ response ->
@@ -82,7 +141,27 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
                 .subscribeOn(schedulerProvider.io())
                 .observeOn(schedulerProvider.ui())
                 .subscribe({ response ->
+                    progressBar.visibility= View.GONE
                     adapter.updatePersonList(response.persons)
+
+                }, { throwable ->
+                    progressBar.visibility= View.GONE
+                    Log.d(AppConstants.APP_TAG, throwable.toString())
+                }))
+    }
+
+
+    fun getLocalities(localityAdapter: ArrayAdapter<String>) {
+
+        CompositeDisposable().add(BeingMomin.getInstance().dataManager.doGetLocalitiesApiCall()
+                .doOnSuccess({ response ->
+                    Log.d(AppConstants.APP_TAG, response.toString())
+                })
+                .subscribeOn(schedulerProvider.io())
+                .observeOn(schedulerProvider.ui())
+                .subscribe({ response ->
+                    localityList= response.localities
+                    localityAdapter.notifyDataSetChanged()
 
                 }, { throwable ->
                     Log.d(AppConstants.APP_TAG, throwable.toString())

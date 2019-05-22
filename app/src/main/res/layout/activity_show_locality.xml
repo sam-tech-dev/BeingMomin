@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.showLocality.ShowLocalityActivity">
+    tools:context=".ui.ambassadorModule.showLocality.ShowLocalityActivity">
 
     <data>
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.beingmomin.mominapp.ui.showLocality.ShowLocalityViewModel" />
+            type="com.beingmomin.mominapp.ui.ambassadorModule.showLocality.ShowLocalityViewModel" />
     </data>
 
 

@@ -1,8 +1,8 @@
 package com.beingmomin.mominapp.ui.base
 
-import androidx.lifecycle.ViewModel
-import androidx.databinding.ObservableBoolean
 import android.util.Log
+import androidx.databinding.ObservableBoolean
+import androidx.lifecycle.ViewModel
 import com.beingmomin.mominapp.utils.rx.SchedulerProvider
 import io.reactivex.disposables.CompositeDisposable
 import java.lang.ref.WeakReference
@@ -13,7 +13,7 @@ abstract class BaseViewModel<N> constructor(var mSchedulerProvider:SchedulerProv
 
     lateinit var mNavigator: WeakReference<N>
 
-    private val mIsLoading = ObservableBoolean(false)
+    val mIsLoading = ObservableBoolean(false)
 
     private val mCompositeDisposable: CompositeDisposable
 

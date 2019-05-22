@@ -43,8 +43,9 @@ class CustomDateSelectionEditText : androidx.appcompat.widget.AppCompatEditText,
         myCalendar.set(Calendar.MONTH, month)
         myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 */
-
-        this.setText("$dayOfMonth/$month/$year")
+        val actualMonth= month+1
+        this.setText("$dayOfMonth/$actualMonth/$year")
+        this.tag="$year-$actualMonth-$dayOfMonth"
 
     }
 

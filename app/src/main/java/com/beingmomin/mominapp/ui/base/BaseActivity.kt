@@ -13,7 +13,7 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.beingmomin.mominapp.ui.signIn.SignInActivity
+import com.beingmomin.mominapp.ui.ambassadorModule.signIn.SignInActivity
 import com.beingmomin.mominapp.utils.CommonUtils
 import com.beingmomin.mominapp.utils.NetworkUtils
 import dagger.android.AndroidInjection

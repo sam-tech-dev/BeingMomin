@@ -10,9 +10,12 @@ class ShowPersonItemViewModel : ViewModel() {
     var pId = MutableLiveData<Int>()
     var locality= MutableLiveData<String>()
 
-
     fun bind(person: Person ) {
-        personWithFather.value = person.name+" s/o "+person.father
+        if(person.father.isEmpty()){
+            personWithFather.value = person.name
+        }else{
+            personWithFather.value = person.name+" s/o "+person.father
+        }
         locality.value = "from : "+person.locality
         pId.value= person.id
     }

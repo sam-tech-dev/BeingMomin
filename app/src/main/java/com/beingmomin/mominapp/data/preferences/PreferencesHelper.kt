@@ -19,4 +19,6 @@ interface PreferencesHelper {
     fun setLocality(locality: String)
     fun getLocality(): String
 
+    fun clearAppPreferences()
+
 }

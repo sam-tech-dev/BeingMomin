@@ -8,10 +8,13 @@ import android.graphics.drawable.ColorDrawable
 import android.provider.Settings
 import android.util.Patterns
 import android.widget.EditText
+import com.beingmomin.mominapp.R
 import com.jakewharton.rxbinding3.widget.textChanges
 import io.reactivex.Observable
 import java.text.SimpleDateFormat
 import java.util.*
+
+
 
 /**
  * Created by amitshekhar on 07/07/17.
@@ -52,7 +55,7 @@ object CommonUtils {
         if (progressDialog.window != null) {
             progressDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
-        //progressDialog.setContentView(R.layout.progress_dialog)
+        progressDialog.setContentView(R.layout.progress_dialog)
         progressDialog.isIndeterminate = true
         progressDialog.setCancelable(false)
         progressDialog.setCanceledOnTouchOutside(false)

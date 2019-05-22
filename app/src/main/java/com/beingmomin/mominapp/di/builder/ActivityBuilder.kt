@@ -1,14 +1,15 @@
 package com.beingmomin.mominapp.di.builder
 
-import com.beingmomin.mominapp.ui.ambassadorDescription.AmbassadorDescriptionActivity
-import com.beingmomin.mominapp.ui.applyForAmbassador.ApplyForAmbassadorActivity
-import com.beingmomin.mominapp.ui.localitySearch.LocalitySearchActivity
-import com.beingmomin.mominapp.ui.localitySearch.LocalitySearchActivityModule
-import com.beingmomin.mominapp.ui.main.MainActivity
-import com.beingmomin.mominapp.ui.main.MainActivityModule
-import com.beingmomin.mominapp.ui.showLocality.ShowLocalityActivity
-import com.beingmomin.mominapp.ui.signIn.SignInActivity
-import com.beingmomin.mominapp.ui.splash.SplashActivity
+import com.beingmomin.mominapp.ui.ambassadorModule.ambassadorDescription.AmbassadorDescriptionActivity
+import com.beingmomin.mominapp.ui.ambassadorModule.applyForAmbassador.ApplyForAmbassadorActivity
+import com.beingmomin.mominapp.ui.ambassadorModule.localitySearch.LocalitySearchActivity
+import com.beingmomin.mominapp.ui.ambassadorModule.localitySearch.LocalitySearchActivityModule
+import com.beingmomin.mominapp.ui.ambassadorModule.main.MainActivity
+import com.beingmomin.mominapp.ui.ambassadorModule.main.MainActivityModule
+import com.beingmomin.mominapp.ui.ambassadorModule.showLocality.ShowLocalityActivity
+import com.beingmomin.mominapp.ui.ambassadorModule.signIn.SignInActivity
+import com.beingmomin.mominapp.ui.appModule.dashboard.DashboardActivity
+import com.beingmomin.mominapp.ui.appModule.splash.SplashActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -35,5 +36,8 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = arrayOf(FragmentBuilder::class, MainActivityModule::class))
     abstract fun bindMainActivity(): MainActivity
+
+    @ContributesAndroidInjector(modules = arrayOf(FragmentBuilder::class))
+    abstract fun bindDashboardActivity(): DashboardActivity
 
 }

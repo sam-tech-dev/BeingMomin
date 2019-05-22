@@ -2,14 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.applyForAmbassador.ApplyForAmbassadorActivity">
+    tools:context=".ui.ambassadorModule.applyForAmbassador.ApplyForAmbassadorActivity">
 
     <data>
         <import type="android.view.View" />
 
         <variable
             name="viewModel"
-            type="com.beingmomin.mominapp.ui.applyForAmbassador.ApplyForAmbassadorViewModel" />
+            type="com.beingmomin.mominapp.ui.ambassadorModule.applyForAmbassador.ApplyForAmbassadorViewModel" />
     </data>
 
     <LinearLayout

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.splash.SplashActivity">
+    tools:context=".ui.appModule.splash.SplashActivity">
 
     <data>
         <import type="android.view.View" />
@@ -35,6 +35,8 @@
                 app:mutableText="@{viewModel.personWithFather}"
                 android:text="Alladin Mohammad s/o Sundra"
                 android:textSize="@dimen/dp_15"
+                android:singleLine="true"
+                android:ellipsize="end"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

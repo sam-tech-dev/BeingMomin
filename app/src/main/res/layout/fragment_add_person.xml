@@ -7,7 +7,7 @@
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.beingmomin.mominapp.ui.main.fragments.addPerson.AddPersonViewModel" />
+            type="com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addPerson.AddPersonViewModel" />
     </data>
 
 
@@ -18,6 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:background="@color/white"
+            android:paddingVertical="@dimen/dp_8"
             android:layout_height="wrap_content">
 
 
@@ -27,7 +28,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:hint="Enter First Name"
@@ -216,6 +216,7 @@
                     android:id="@+id/et_father_name"
                     android:layout_width="match_parent"
                     android:textSize="@dimen/dp_15"
+                    android:tag="0"
                     android:focusableInTouchMode="false"
                     android:layout_height="wrap_content"
 
@@ -242,6 +243,7 @@
                     android:id="@+id/et_mother_name"
                     android:layout_width="match_parent"
                     android:textSize="@dimen/dp_15"
+                    android:tag="0"
                     android:focusableInTouchMode="false"
                     android:layout_height="wrap_content"
                     />
@@ -293,6 +295,7 @@
                     android:id="@+id/et_partner_name"
                     android:layout_width="match_parent"
                     android:textSize="@dimen/dp_15"
+                    android:tag="0"
                     android:focusableInTouchMode="false"
                     android:layout_height="wrap_content"
                     />
@@ -334,6 +337,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp"
+                android:visibility="gone"
                 android:layout_marginRight="8dp"
                 android:hint="Enter Qualification"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -504,7 +508,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
-                    android:text="@={viewModel.address}"
                     android:textSize="@dimen/dp_15" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -569,6 +572,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_attached_profile" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:shadowColor="@color/colorSecondary"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:indeterminateTint="@color/colorSecondary"
+                app:layout_constraintTop_toTopOf="@+id/bt_submit"
+                app:layout_constraintBottom_toBottomOf="@+id/bt_submit"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:elevation="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -8,7 +8,6 @@ import javax.inject.Inject
  */
 class AppPreferencesHelper @Inject constructor(var appPref: AppPreferences) : PreferencesHelper {
 
-
     companion object {
         const val PREF_KEY_ACCESS_TOKEN = "token"
         const val PREF_KEY_IS_LOGIN = "isLogin"
@@ -43,6 +42,9 @@ class AppPreferencesHelper @Inject constructor(var appPref: AppPreferences) : Pr
     override fun getLocality(): String {
         return appPref.fetchPreferences(PREF_KEY_LOCALITY, "")
     }
+
+    override fun clearAppPreferences() = appPref.clearAllPreferences()
+
 
 
 }
