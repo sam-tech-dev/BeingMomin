@@ -159,98 +159,7 @@
     <last-search-timestamp>1556518883342</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc340cac-d26a-40ac-8de7-60ec735b4090" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/reponses.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/MainViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/fragments/addPerson/AddPersonViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardNavigator.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_dashboard.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/progress_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/app_drawer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ViewModelProviderFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ViewModelProviderFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customDateSelection/CustomDateSelectionEditText.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customDateSelection/CustomDateSelectionEditText.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/CustomPersonSearchEditText.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/CustomPersonSearchEditText.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/ShowPersonItemViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/ShowPersonItemViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/DataManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/DataManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/RequestBodies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/RequestBodies.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiEndPoint.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiEndPoint.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/AppApiHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/AppApiHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/preferences/AppPreferencesHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/preferences/AppPreferencesHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/preferences/PreferencesHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/preferences/PreferencesHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/ActivityBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/ActivityBuilder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/FragmentBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/FragmentBuilder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorDescription/AmbassadorDescriptionActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/ambassadorDescription/AmbassadorDescriptionActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorDescription/AmbassadorDescriptionNavigator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/ambassadorDescription/AmbassadorDescriptionNavigator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorDescription/AmbassadorDescriptionViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/ambassadorDescription/AmbassadorDescriptionViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/applyForAmbassador/ApplyForAmbassadorActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/applyForAmbassador/ApplyForAmbassadorActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/applyForAmbassador/ApplyForAmbassadorNavigator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/applyForAmbassador/ApplyForAmbassadorNavigator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/applyForAmbassador/ApplyForAmbassadorViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/applyForAmbassador/ApplyForAmbassadorViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/base/BaseActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/base/BaseActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/base/BaseViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/base/BaseViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/localitySearch/LocalitySearchActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/localitySearch/LocalitySearchActivityModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchActivityModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/localitySearch/LocalitySearchAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/localitySearch/LocalitySearchItemViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchItemViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/localitySearch/LocalitySearchNavigator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchNavigator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/localitySearch/LocalitySearchViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/MainActivityModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/MainActivityModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/MainNavigator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/MainNavigator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/MainViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/fragments/addPerson/AddPersonFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/fragments/addPerson/AddPersonFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/fragments/addPerson/AddPersonNavigator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/fragments/addPerson/AddPersonNavigator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/fragments/addPerson/AddPersonViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/fragments/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/fragments/home/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/fragments/home/HomeNavigator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/fragments/home/HomeNavigator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/fragments/home/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/fragments/home/HomeViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/showLocality/ShowLocalityActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/showLocality/ShowLocalityActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/showLocality/ShowLocalityNavigator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/showLocality/ShowLocalityNavigator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/showLocality/ShowLocalityViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/showLocality/ShowLocalityViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/signIn/SignInActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/signIn/SignInActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/signIn/SignInNavigator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/signIn/SignInNavigator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/signIn/SignInViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/signIn/SignInViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/splash/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/splash/SplashActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/splash/SplashNavigator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/splash/SplashNavigator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/splash/SplashViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/splash/SplashViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/CommonUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/CommonUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ambassador_description.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ambassador_description.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_apply_for_ambassador.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_apply_for_ambassador.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_locality.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_locality.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_show_locality.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_show_locality.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_person.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_person.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_search_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_search_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_locality_child.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_locality_child.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/ambassador_drawer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dc340cac-d26a-40ac-8de7-60ec735b4090" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,14 +196,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
+            <state relative-caret-position="90">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="331">
@@ -306,13 +215,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1404">
+            <state relative-caret-position="529">
               <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
@@ -422,6 +331,15 @@
       <pane id="AndroidView">
         <subPane>
           <expand>
+            <path>
+              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
             <path>
               <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -641,7 +559,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Resources Explorer" order="0" sideWeight="0.5016129" side_tool="true" weight="0.2501992" />
       <window_info id="Captures" order="1" side_tool="true" weight="0.24940239" />
@@ -652,13 +569,13 @@
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info x="206" y="363" width="1301" height="744" id="Component Tree" order="8" side_tool="true" type="FLOATING" />
-      <window_info active="true" content_ui="combo" id="Project" order="9" sideWeight="0.4983871" visible="true" weight="0.2501992" />
+      <window_info content_ui="combo" id="Project" order="9" sideWeight="0.4983871" visible="true" weight="0.2501992" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.5250404" />
       <window_info anchor="bottom" id="Debug" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="3" weight="0.47419354" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32956383" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32903227" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="5" visible="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" weight="0.32956383" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.6919355" />
@@ -1086,23 +1003,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
+        <state relative-caret-position="90">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
@@ -1112,6 +1015,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
           <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
