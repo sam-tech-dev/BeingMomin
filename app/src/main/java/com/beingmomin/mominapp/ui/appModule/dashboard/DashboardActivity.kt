@@ -78,7 +78,6 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding, DashboardViewMo
             override fun onDrawerClosed(drawerView: View) {
                 super.onDrawerClosed(drawerView)
             }
-
             override fun onDrawerOpened(drawerView: View) {
                 super.onDrawerOpened(drawerView)
                 hideKeyboard()
