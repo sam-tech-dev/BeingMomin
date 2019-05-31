@@ -18,4 +18,6 @@ interface ApiHelper {
     fun doAddPersonApiCall(request:AddPersonApiBody,profileFile: File):Single<AddPersonResponse>
 
     fun doGetLocalitiesApiCall(): Single<GetLocalitiesResponse>
+
+    fun doGetFamiliesApiCall(request: GetFamiliesBody): Single<GetFamiliesResponse>
 }

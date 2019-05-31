@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.appModule.splash.SplashActivity">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.beingmomin.mominapp.utils.ShowFamilyModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardUseCompatPadding="true"
+        android:id="@+id/cv_family"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingVertical="@dimen/dp_7"
+            android:layout_height="match_parent">
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:id="@+id/tv_family_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constrainedWidth="true"
+                app:mutableText="@{viewModel.familyCount}"
+                android:text="Family : 1"
+                android:textSize="@dimen/dp_16"
+                android:singleLine="true"
+                android:ellipsize="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:id="@+id/tv_family_lead_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Family Lead :"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_family_number" />
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewMedium
+                android:id="@+id/tv_family_lead_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textSize="@dimen/dp_16"
+                android:textColor="@color/black_tint3"
+                app:mutableText="@{viewModel.ancestorName}"
+                android:text="Alladin Mohammad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tv_family_lead_label"
+                app:layout_constraintTop_toBottomOf="@+id/tv_family_number" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

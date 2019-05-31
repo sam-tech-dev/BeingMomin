@@ -67,7 +67,7 @@
             app:itemBackground="@color/white"
             app:itemIconTint="@color/black_effective"
             app:itemTextColor="@color/black_effective"
-            app:menu="@menu/ambassador_drawer">
+            app:menu="@menu/app_drawer">
 
             <TextView
                 android:id="@+id/tvAppVersion"

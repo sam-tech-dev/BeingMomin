@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.beingmomin.mominapp.ui.appModule.dashboard.fragments.hierarchy.HierarchyViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crd_person_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/sp_locality"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        app:bindLocalitiesToSpinner="@{viewModel.listOfLocality}"
+                        app:layout_constraintEnd_toStartOf="@+id/sp_gender"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:ms_arrowColor="@color/brown_tint1"
+                        app:ms_arrowSize="16dp"
+                        app:ms_baseColor="@color/spinner_base_color"
+                        app:ms_enableErrorLabel="false"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_errorColor="@color/red_dark"
+                        app:ms_floatingLabelColor="@color/brown_tint1"
+                        app:ms_floatingLabelText="Select profession"
+                        app:ms_hint="Select professional"
+                        app:ms_hintColor="@color/brown_tint1"
+                        app:ms_hintTextSize="@dimen/dp_16"
+                        app:ms_multiline="false"
+                        app:ms_thickness="1dp" />
+
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/sp_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        app:ms_hintTextSize="@dimen/dp_16"
+                        app:bindListToSpinner="@{viewModel.listOfGenders}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/sp_locality"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:ms_arrowColor="@color/brown_tint1"
+                        app:ms_arrowSize="16dp"
+                        app:ms_baseColor="@color/spinner_base_color"
+                        app:ms_enableErrorLabel="false"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_errorColor="@color/red_dark"
+                        app:ms_floatingLabelColor="@color/brown_tint1"
+                        app:ms_floatingLabelText="Select Gender"
+                        app:ms_hint="Select Gender"
+                        app:ms_hintColor="@color/brown_tint1"
+                        app:ms_multiline="false"
+                        app:ms_thickness="1dp" />
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/sv_person"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        app:iconifiedByDefault="false"
+                        android:queryHint="Search any registered person"
+                        app:layout_constraintEnd_toStartOf="@+id/pb_search_progress"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sp_locality" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_search_progress"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminateTint="@color/colorPrimary"
+                        android:progressTint="@color/colorPrimary"
+                        android:visibility="@{viewModel.mIsPersonLoading ? View.VISIBLE : View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="@+id/sv_person"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/sv_person"
+                        app:layout_constraintTop_toTopOf="@+id/sv_person" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:id="@+id/rcv_persons"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        app:adapter="@{viewModel.personAdapter}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sv_person" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crd_locality_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crd_person_search">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                        android:id="@+id/tv_request_to_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/atv_locality"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Search Locality"
+                        android:textSize="@dimen/dp_16"
+                        app:bindSuggestionList="@{viewModel.listOfLocality}"
+                        app:layout_constraintEnd_toStartOf="@+id/pb_get_families"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_request_to_register" />
+
+
+                    <ProgressBar
+                        android:id="@+id/pb_get_families"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminateTint="@color/colorPrimary"
+                        android:progressTint="@color/colorPrimary"
+                        android:visibility="@{viewModel.mIsFamiliesLoading ? View.VISIBLE : View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="@+id/atv_locality"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/atv_locality"
+                        app:layout_constraintTop_toTopOf="@+id/atv_locality" />
+
+                    <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewMedium
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Families"
+                        android:textColor="@color/black_tint4"
+                        android:textSize="@dimen/dp_20"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/atv_locality" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/rcv_families"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        app:adapter="@{viewModel.familyAdapter}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

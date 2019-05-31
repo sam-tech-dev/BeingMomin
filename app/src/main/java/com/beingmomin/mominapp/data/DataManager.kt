@@ -55,6 +55,8 @@ class DataManager @Inject constructor( private  val appPrefHelper: AppPreference
 
     override fun doGetLocalitiesApiCall(): Single<GetLocalitiesResponse> = apiHelper.doGetLocalitiesApiCall()
 
+    override fun doGetFamiliesApiCall(request: GetFamiliesBody): Single<GetFamiliesResponse> = apiHelper.doGetFamiliesApiCall(request)
+
     /**
      * end of api call functions
      */

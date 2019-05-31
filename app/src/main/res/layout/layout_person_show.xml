@@ -14,7 +14,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         app:cardUseCompatPadding="true"
-        android:id="@+id/cv_person"
+        android:id="@+id/cvPerson"
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +23,7 @@
             android:layout_height="match_parent">
 
             <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewMedium
-                android:id="@+id/tv_person_name"
+                android:id="@+id/tv_family_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -42,7 +42,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
-                android:id="@+id/tv_person_locality"
+                android:id="@+id/tv_family_lead_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -55,7 +55,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_person_name" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_family_number" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

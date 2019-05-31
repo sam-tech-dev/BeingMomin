@@ -75,4 +75,12 @@ class AppApiHelper @Inject constructor(val apiHeader: ApiHeader) : ApiHelper {
                 .getObjectSingle<GetLocalitiesResponse>(GetLocalitiesResponse::class.java)
 
     }
+
+
+    override fun doGetFamiliesApiCall(request: GetFamiliesBody): Single<GetFamiliesResponse> {
+        return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_GET_FAMILIES)
+                .addApplicationJsonBody(request)
+                .build()
+                .getObjectSingle<GetFamiliesResponse>(GetFamiliesResponse::class.java)
+    }
 }

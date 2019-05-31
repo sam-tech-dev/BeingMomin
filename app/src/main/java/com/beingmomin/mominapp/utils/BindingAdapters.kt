@@ -1,14 +1,21 @@
 package com.beingmomin.mominapp.utils
 
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatSpinner
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
+import com.beingmomin.mominapp.R
+import com.beingmomin.mominapp.data.network.models.Locality
 import com.beingmomin.mominapp.utils.extension.getParentActivity
 import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
+
+
 
 @BindingAdapter("adapter")
 fun setAdapter(view: androidx.recyclerview.widget.RecyclerView, adapter: androidx.recyclerview.widget.RecyclerView.Adapter<*>) {
@@ -43,3 +50,39 @@ fun loadImage(view: CircleImageView, imageUrl: String) {
     }
 
 }
+
+@BindingAdapter("bindSuggestionList")
+fun setSuggestionList(view: AutoCompleteTextView, listOfSuggestion: MutableLiveData<MutableList<Locality>>?) {
+    val parentActivity: AppCompatActivity? = view.getParentActivity()
+    if (parentActivity != null && listOfSuggestion != null) {
+        listOfSuggestion.observe(parentActivity, Observer {
+            val adapter = ArrayAdapter<Locality>(parentActivity, android.R.layout.simple_list_item_1, it)
+            view.setAdapter(adapter)
+        })
+    }
+}
+
+@BindingAdapter("bindListToSpinner")
+fun setListToSpinner(view: AppCompatSpinner, listOfSuggestion: MutableLiveData<MutableList<String>>?) {
+    val parentActivity: AppCompatActivity? = view.getParentActivity()
+    if (parentActivity != null && listOfSuggestion != null) {
+        listOfSuggestion.observe(parentActivity, Observer {
+            val adapter = ArrayAdapter<String>(parentActivity, R.layout.simple_list_item, it)
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            view.setAdapter(adapter)
+        })
+    }
+}
+
+@BindingAdapter("bindLocalitiesToSpinner")
+fun setLocalitiesToSpinner(view: AppCompatSpinner, listOfSuggestion: MutableLiveData<MutableList<Locality>>?) {
+    val parentActivity: AppCompatActivity? = view.getParentActivity()
+    if (parentActivity != null && listOfSuggestion != null) {
+        listOfSuggestion.observe(parentActivity, Observer {
+            val adapter = ArrayAdapter<Locality>(parentActivity, R.layout.simple_list_item, it)
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            view.setAdapter(adapter)
+        })
+    }
+}
+

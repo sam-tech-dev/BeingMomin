@@ -38,7 +38,10 @@ data class AddPersonApiBody(
         @SerializedName("aliveFlag") var aliveFlag: String,
 		@SerializedName("profession") var profession: String,
 		@SerializedName("profileName") var profileName: String
-
-
 )
+
+data class GetFamiliesBody(
+		@SerializedName("localityId")var localityId:Int
+)
+
 

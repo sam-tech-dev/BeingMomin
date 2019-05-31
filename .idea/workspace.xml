@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="warn" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AvailableLibraryUpdateStorage">
@@ -159,7 +159,53 @@
     <last-search-timestamp>1556518883342</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc340cac-d26a-40ac-8de7-60ec735b4090" name="Default Changelist" comment="" />
+    <list default="true" id="dc340cac-d26a-40ac-8de7-60ec735b4090" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetFamiliesResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetLocalitiesResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/frontMost/FrontMostFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/frontMost/FrontMostNavigator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/frontMost/FrontMostViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/FamilyAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyNavigator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/PersonAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/RecyclerViewModels.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_frontmost.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_family_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/simple_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ViewModelProviderFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ViewModelProviderFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/CustomPersonSearchEditText.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/CustomPersonSearchEditText.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/ShowPersonItemViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/ShowPersonItemViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/DataManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/DataManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/RequestBodies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/RequestBodies.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/reponses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/reponses.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiEndPoint.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiEndPoint.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/AppApiHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/AppApiHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/FragmentBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/FragmentBuilder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_search_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_search_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/app_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/app_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,41 +237,56 @@
       </state>
     </system>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="BeingMomin" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchAdapter.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="525">
+              <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+            <state relative-caret-position="162">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardViewModel.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/FamilyAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            <state relative-caret-position="286">
+              <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+              <folding>
+                <element signature="e#76#477#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetFamiliesResponse.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -236,9 +297,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Class" />
         <option value="layoutResourceFile_vertical" />
         <option value="Kotlin File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -248,9 +309,12 @@
       <find>profileFile</find>
       <find>android:attr/progressBarStyleLarge</find>
       <find>Read_PHO</find>
+      <find>dp</find>
     </findStrings>
     <replaceStrings>
       <replace>AddPersonViewModel</replace>
+      <replace>font_</replace>
+      <replace>sp</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -259,40 +323,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/fragments/addPerson/AddPersonFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customDateSelection/CustomDateSelectionEditText.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/drawer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/preferences/PreferencesHelper.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/preferences/AppPreferencesHelper.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/MainNavigator.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/MainViewModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/main/MainActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/progress_dialog.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/CommonUtils.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/base/BaseViewModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/localitySearch/LocalitySearchViewModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/localitySearch/LocalitySearchActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/localitySearch/LocalitySearchItemViewModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_person_search_dialog.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiEndPoint.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiHelper.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/AppApiHelper.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/DataManager.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/reponses.kt" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/CustomPersonSearchEditText.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/dashboard/DashboardActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/dashboard/DashboardNavigator.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/dashboard/DashboardViewModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ambassador_description.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_apply_for_ambassador.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_search_locality.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_show_locality.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_person.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
@@ -305,11 +335,45 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/splash/SplashActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/ActivityBuilder.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/app_drawer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_dashboard.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/FrontMost/FrontMostNavigator.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/FrontMost/FrontMostViewModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/FrontMost/FrontMostFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyNavigator.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HeirarchyViewModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_family_row.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ViewModelProviderFactory.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/FragmentBuilder.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/app_drawer.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/frontMost/FrontMostFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_frontmost.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_person_search_dialog.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/PersonAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_hierachy.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/simple_list_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/reponses.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetLocalitiesResponse.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/CustomPersonSearchEditText.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiEndPoint.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/RequestBodies.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiHelper.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/AppApiHelper.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/DataManager.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/ShowPersonItemViewModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/RecyclerViewModels.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_family_show.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetFamiliesResponse.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/FamilyAdapter.kt" />
       </list>
     </option>
   </component>
@@ -327,6 +391,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -342,14 +407,37 @@
             </path>
             <path>
               <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mominapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mominapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mominapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="appModule" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mominapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,11 +458,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.beingmomin.mominapp.ui.appModule.dashboard.fragments.hierarchy" />
+      <recent name="com.beingmomin.mominapp.ui.appModule.dashboard.fragments.FrontMost" />
       <recent name="com.beingmomin.mominapp.ui.dashboard" />
       <recent name="com.beingmomin.mominapp.customs.customPersonSearch" />
       <recent name="com.beingmomin.mominapp.ui.main.fragments.addPerson" />
-      <recent name="com.beingmomin.mominapp.ui.main" />
-      <recent name="com.beingmomin.mominapp.ui.applyForAmbassador" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.beingmomin.mominapp.ui.dashboard" />
@@ -540,7 +628,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556516447657</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add profile photo">
+      <created>1558516214697</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558516214697</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -560,24 +655,24 @@
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <layout>
-      <window_info id="Resources Explorer" order="0" sideWeight="0.5016129" side_tool="true" weight="0.2501992" />
+      <window_info id="Resources Explorer" order="0" sideWeight="0.5032258" side_tool="true" weight="0.3250996" />
       <window_info id="Captures" order="1" side_tool="true" weight="0.24940239" />
       <window_info id="Structure" order="2" sideWeight="0.5016129" side_tool="true" weight="0.2501992" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Favorites" order="3" sideWeight="0.5016129" side_tool="true" weight="0.21035856" />
       <window_info id="Build Variants" order="4" sideWeight="0.5016129" side_tool="true" weight="0.2501992" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info x="206" y="363" width="1301" height="744" id="Component Tree" order="8" side_tool="true" type="FLOATING" />
-      <window_info content_ui="combo" id="Project" order="9" sideWeight="0.4983871" visible="true" weight="0.2501992" />
+      <window_info content_ui="combo" id="Project" order="9" sideWeight="0.4967742" visible="true" weight="0.25737053" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.5250404" />
       <window_info anchor="bottom" id="Debug" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Logcat" order="3" weight="0.47419354" />
+      <window_info anchor="bottom" id="Logcat" order="3" weight="0.5467742" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32956383" />
       <window_info active="true" anchor="bottom" id="Terminal" order="5" visible="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" weight="0.32956383" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32956383" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.6919355" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32419354" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -663,372 +758,383 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="196">
+          <caret line="151" column="57" selection-start-line="151" selection-start-column="57" selection-end-line="151" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/ShowPersonAdapter.kt">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.0/98515ba3feb571f93b923e61f643bdaed59d14ac/kotlin-stdlib-1.3.0-sources.jar!/kotlin/collections/MutableCollectionsJVM.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="214">
+          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_locality.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/applyForAmbassador/ApplyForAmbassadorViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/AppConstants.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/android/widget/AutoCompleteTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="972" column="19" selection-start-line="972" selection-start-column="19" selection-end-line="972" selection-end-column="19" />
           <folding>
-            <element signature="e#60#432#0" expanded="true" />
+            <element signature="e#35903#35904#0" expanded="true" />
+            <element signature="e#35945#35946#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/android/widget/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-821">
+          <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ganfra/material-spinner/2.0.0/7fd84a5f3f392a09154bff7ed93249e751570ffc/material-spinner-2.0.0-sources.jar!/fr/ganfra/materialspinner/MaterialSpinner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.0/98515ba3feb571f93b923e61f643bdaed59d14ac/kotlin-stdlib-1.3.0-sources.jar!/kotlin/Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="189" column="17" selection-start-line="189" selection-start-column="17" selection-end-line="189" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/base/BaseViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/signIn/SignInViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="126" column="20" lean-forward="true" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/signIn/SignInActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_hierachy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/view_locality_child.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="130" lean-forward="true" selection-start-line="18" selection-start-column="130" selection-end-line="18" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchItemViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_person_search_dialog.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="67" column="39" lean-forward="true" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/platforms/android-28/data/res/layout/simple_list_item_2.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/platforms/android-28/data/res/layout/simple_list_item_1.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_list_item.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding>
+            <element signature="e#1115#1131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.0/8bee30ce9d075088b3d590488a270e2c3ea39b3a/kotlin-stdlib-common-1.3.0-sources.jar!/generated/_Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="921" column="27" selection-start-line="921" selection-start-column="27" selection-end-line="921" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/PersonAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#76#504#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/CustomPersonSearchEditText.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="180">
+          <caret line="120" column="28" lean-forward="true" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/showLocality/ShowLocalityNavigator.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiEndPoint.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="342">
+          <caret line="19" column="97" selection-start-line="19" selection-start-column="97" selection-end-line="19" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/reponses.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/RequestBodies.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiHelper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/AppApiHelper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/dtManager.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/DataManager.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        <state relative-caret-position="515">
+          <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/showLocality/ShowLocalityViewModel.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetLocalitiesResponse.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="288">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/applyForAmbassador/ApplyForAmbassadorActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_family_row.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/showLocality/ShowLocalityActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/applyForAmbassador/ApplyForAmbassadorNavigator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/MainNavigator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/test.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/base/BaseFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/base/BaseViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ambassador_description.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_frontmost.xml">
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_apply_for_ambassador.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/extension/ViewExtension.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_locality.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/ShowPersonItemViewModel.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_show_locality.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="360">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
-            <element signature="e#7025#7039#0" expanded="true" />
+            <element signature="e#60#195#0" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+        <state relative-caret-position="35">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_add_person.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_person_search_dialog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/view_locality_child.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        <state relative-caret-position="306">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/ShowPersonAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_family_show.xml">
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/progress_dialog.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/MainActivityModule.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_for_camera_gallery_selection.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchItemViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/applyForAmbassador/ApplyForAmbassadorViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/splash/SplashNavigator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/splash/SplashActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/splash/SplashViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardNavigator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/test.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/component/AppComponent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/module/AppModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/ActivityBuilder.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/app_drawer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="288">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
           <folding>
-            <element signature="e#463#483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/ambassador_drawer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/FragmentBuilder.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/base/BaseActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/dataBindingGenBaseClassesDebug/out/com/beingmomin/mominapp/databinding/NavHeaderMainBinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_dashboard.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/main/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-          <folding>
-            <element signature="e#2615#3416#0" />
+            <element signature="e#1597#1611#0" expanded="true" />
+            <element signature="e#2300#2314#0" expanded="true" />
+            <element signature="e#2977#2991#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml">
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/ambassadorModule/localitySearch/LocalitySearchAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="286">
+          <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardViewModel.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/RecyclerViewModels.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        <state relative-caret-position="288">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#39#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetFamiliesResponse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/FamilyAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="e#76#477#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

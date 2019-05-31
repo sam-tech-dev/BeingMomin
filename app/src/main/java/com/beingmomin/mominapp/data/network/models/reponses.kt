@@ -7,7 +7,4 @@ data class AddPersonResponse(
 )
 
 
-data class GetLocalitiesResponse(
-        @SerializedName("Status") var status: Int,
-        @SerializedName("Localities") var localities: MutableList<String>
-)
+

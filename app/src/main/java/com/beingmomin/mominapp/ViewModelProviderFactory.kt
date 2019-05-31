@@ -11,6 +11,9 @@ import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addPerson.AddP
 import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.home.HomeViewModel
 import com.beingmomin.mominapp.ui.ambassadorModule.showLocality.ShowLocalityViewModel
 import com.beingmomin.mominapp.ui.ambassadorModule.signIn.SignInViewModel
+import com.beingmomin.mominapp.ui.appModule.dashboard.DashboardViewModel
+import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.frontMost.FrontMostViewModel
+import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.hierarchy.HierarchyViewModel
 import com.beingmomin.mominapp.ui.appModule.splash.SplashViewModel
 import com.beingmomin.mominapp.utils.rx.SchedulerProvider
 import javax.inject.Inject
@@ -51,7 +54,16 @@ constructor(private val dataManager: DataManager,
         }else if (modelClass.isAssignableFrom(AddPersonViewModel::class.java)) {
             return AddPersonViewModel(dataManager,schedulerProvider) as T
 
+        }else if (modelClass.isAssignableFrom(DashboardViewModel::class.java)) {
+            return DashboardViewModel(dataManager,schedulerProvider) as T
+
+        }else if (modelClass.isAssignableFrom(FrontMostViewModel::class.java)) {
+            return FrontMostViewModel(dataManager,schedulerProvider) as T
+
+        }else if (modelClass.isAssignableFrom(HierarchyViewModel::class.java)) {
+            return HierarchyViewModel(dataManager,schedulerProvider) as T
         }
+
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
     }
 }

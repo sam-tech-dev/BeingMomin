@@ -17,6 +17,8 @@ import com.beingmomin.mominapp.databinding.ActivityDashboardBinding
 import com.beingmomin.mominapp.databinding.NavHeaderDashboardBinding
 import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addPerson.AddPersonFragment
 import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.home.HomeFragment
+import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.frontMost.FrontMostFragment
+import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.hierarchy.HierarchyFragment
 import com.beingmomin.mominapp.ui.base.BaseActivity
 import com.google.android.material.navigation.NavigationView
 import dagger.android.AndroidInjector
@@ -63,6 +65,8 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding, DashboardViewMo
         super.onCreate(savedInstanceState)
         viewModel.setNavigator(this)
         mActivityDashboardBinding = getViewDataBinding()
+
+        setUp()
     }
 
 
@@ -88,8 +92,8 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding, DashboardViewMo
 
         setupNavMenu()
 
-        navigation_view_dashboard.setCheckedItem(R.id.nav_item_home)
-        onNavigationItemSelected(navigation_view_dashboard.getMenu().getItem(0))
+        navigation_view_dashboard.setCheckedItem(R.id.nav_item_hierarchy)
+        onNavigationItemSelected(navigation_view_dashboard.getMenu().getItem(1))
 
     }
 
@@ -100,21 +104,21 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding, DashboardViewMo
         navigation_view_dashboard.setNavigationItemSelectedListener(this)
     }
 
-    private fun showHomeFragment() {
+    private fun showFrontMostFragment() {
         supportFragmentManager
                 .beginTransaction()
                 .addToBackStack(HomeFragment.TAG)
                 .setCustomAnimations(R.anim.slide_left, R.anim.slide_right)
-                .add(R.id.fl_main, HomeFragment.newInstance(), HomeFragment.TAG)
+                .add(R.id.fl_main, FrontMostFragment.newInstance(), FrontMostFragment.TAG)
                 .commit()
     }
 
-    private fun showAddPersonFragment() {
+    private fun showHierarchyFragment() {
         supportFragmentManager
                 .beginTransaction()
                 .addToBackStack(AddPersonFragment.TAG)
                 .setCustomAnimations(R.anim.slide_left, R.anim.slide_right)
-                .add(R.id.fl_main, AddPersonFragment.newInstance(), AddPersonFragment.TAG)
+                .add(R.id.fl_main, HierarchyFragment.newInstance(), HierarchyFragment.TAG)
                 .commit()
     }
 
@@ -127,9 +131,15 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding, DashboardViewMo
         drawer_main.closeDrawer(GravityCompat.START)
         when (p0.getItemId()) {
             R.id.nav_item_home -> {
-                showHomeFragment()
+                showFrontMostFragment()
                 return true
             }
+
+            R.id.nav_item_hierarchy->{
+                showHierarchyFragment()
+                return true
+            }
+
             else -> {
                 return false
             }

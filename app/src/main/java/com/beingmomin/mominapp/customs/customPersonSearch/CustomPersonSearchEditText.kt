@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.beingmomin.mominapp.BeingMomin
 import com.beingmomin.mominapp.R
+import com.beingmomin.mominapp.data.network.models.Locality
 import com.beingmomin.mominapp.data.network.models.SearchPersonApiBody
 import com.beingmomin.mominapp.utils.AppConstants
 import com.beingmomin.mominapp.utils.rx.AppSchedulerProvider
@@ -26,10 +27,10 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
 
     var adapter = ShowPersonAdapter(this)
     val schedulerProvider = AppSchedulerProvider()
-    lateinit var locality: String
-    lateinit var gender: String
+    var locality = ""
+     var gender = ""
     lateinit var title: String
-    var localityList = mutableListOf<String>()
+    var localityList = mutableListOf<Locality>()
 
     constructor(context: Context) : super(context) {
         this.typeface = Typeface.createFromAsset(context.assets, "fonts/GT-Walsheim-Regular.ttf")
@@ -64,9 +65,10 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
 
 
 
-        localityList.clear()
-        localityList.add(locality)
-        val localityAdapter = ArrayAdapter<String>(context!!, android.R.layout.simple_spinner_item, localityList)
+       /* localityList.clear()
+        localityList.add(locality)*/
+
+        val localityAdapter = ArrayAdapter<Locality>(context!!, android.R.layout.simple_spinner_item, localityList)
         localityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         dialog.sp_locality.setAdapter(localityAdapter)
 
@@ -77,7 +79,7 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 if (position >= 0) {
-                    locality= localityList.get(position)
+                    locality= (parent?.getItemAtPosition(position) as Locality).localityName
                 }
             }
         })
@@ -96,7 +98,7 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 if (position >= 0) {
-                     gender = genderList.get(position)
+                     gender = parent?.getItemAtPosition(position) as String
 
                 }
             }
@@ -160,7 +162,7 @@ class CustomPersonSearchEditText : androidx.appcompat.widget.AppCompatEditText {
                 .subscribeOn(schedulerProvider.io())
                 .observeOn(schedulerProvider.ui())
                 .subscribe({ response ->
-                    localityList= response.localities
+                    localityList= response.localities.sortedWith(compareBy({ it.localityName})).toMutableList()
                     localityAdapter.notifyDataSetChanged()
 
                 }, { throwable ->

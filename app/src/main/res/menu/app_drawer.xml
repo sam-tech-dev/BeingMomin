@@ -8,9 +8,9 @@
             android:title="@string/home" />
 
         <item
-            android:id="@+id/nav_item_add_person"
+            android:id="@+id/nav_item_hierarchy"
             android:icon="@drawable/ic_person_add_black_24dp"
-            android:title="@string/add_person" />
+            android:title="Hierarchy" />
 
 
 

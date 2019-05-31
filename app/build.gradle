@@ -10,7 +10,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.beingmomin.mominapp"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -29,10 +29,10 @@ android {
             buildConfigField("String", "environment", "\"development\"")
 
             //office local url
-            buildConfigField("String", "BASE_URL", "\"http://172.20.5.152:8000/\"")
+            //buildConfigField("String", "BASE_URL", "\"http://172.20.5.148:8000/\"")
 
             //PG local url
-            //buildConfigField("String", "BASE_URL", "\"http://192.168.8.19:8000/\"")
+            buildConfigField("String", "BASE_URL", "\"http://192.168.8.19:8000/\"")
 
             buildConfigField("String", "API_EXT", "\"AmbassadorPortal/\"")
 
