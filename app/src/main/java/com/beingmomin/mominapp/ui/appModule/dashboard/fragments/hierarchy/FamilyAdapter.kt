@@ -37,6 +37,7 @@ class FamilyAdapter  : RecyclerView.Adapter<FamilyAdapter.viewHolder>() {
         }
     }
 
+
     fun updateAncestorList(ancestorList:List<Ancestor>){
         this.listOfAncestors = ancestorList
         notifyDataSetChanged()
