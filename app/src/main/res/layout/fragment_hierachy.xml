@@ -33,7 +33,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp">
 
                     <fr.ganfra.materialspinner.MaterialSpinner
                         android:id="@+id/sp_locality"
@@ -72,7 +73,6 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
-                        app:ms_hintTextSize="@dimen/dp_16"
                         app:bindListToSpinner="@{viewModel.listOfGenders}"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/sp_locality"
@@ -87,6 +87,7 @@
                         app:ms_floatingLabelText="Select Gender"
                         app:ms_hint="Select Gender"
                         app:ms_hintColor="@color/brown_tint1"
+                        app:ms_hintTextSize="@dimen/dp_16"
                         app:ms_multiline="false"
                         app:ms_thickness="1dp" />
 
@@ -99,8 +100,8 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
-                        app:iconifiedByDefault="false"
                         android:queryHint="Search any registered person"
+                        app:iconifiedByDefault="false"
                         app:layout_constraintEnd_toStartOf="@+id/pb_search_progress"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/sp_locality" />
@@ -120,10 +121,10 @@
 
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_persons"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:id="@+id/rcv_persons"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
@@ -152,7 +153,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="24dp">
 
                     <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
                         android:id="@+id/tv_request_to_register"
@@ -164,7 +166,8 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <AutoCompleteTextView
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/atv_locality"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -173,12 +176,29 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
-                        android:hint="Search Locality"
-                        android:textSize="@dimen/dp_16"
-                        app:bindSuggestionList="@{viewModel.listOfLocality}"
                         app:layout_constraintEnd_toStartOf="@+id/pb_get_families"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_request_to_register" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_request_to_register">
+
+
+                    <AutoCompleteTextView
+                            android:id="@+id/et_locality"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:hint="Search Locality"
+                            android:maxLines="1"
+                            android:textSize="@dimen/dp_16"
+                            app:bindSuggestionList="@{viewModel.listOfLocality}"
+                            app:layout_constraintEnd_toStartOf="@+id/pb_get_families"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_request_to_register" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
 
                     <ProgressBar
@@ -206,18 +226,19 @@
                         android:text="Families"
                         android:textColor="@color/black_tint4"
                         android:textSize="@dimen/dp_20"
+                        android:visibility="@{viewModel.mIsFamiliesShow ? View.VISIBLE : View.GONE}"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/atv_locality" />
 
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_families"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
-                        android:id="@+id/rcv_families"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
                         app:adapter="@{viewModel.familyAdapter}"

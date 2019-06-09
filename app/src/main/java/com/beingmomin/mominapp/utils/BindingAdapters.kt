@@ -1,5 +1,6 @@
 package com.beingmomin.mominapp.utils
 
+import android.view.MotionEvent
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
@@ -14,7 +15,6 @@ import com.beingmomin.mominapp.data.network.models.Locality
 import com.beingmomin.mominapp.utils.extension.getParentActivity
 import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
-
 
 
 @BindingAdapter("adapter")
@@ -43,7 +43,7 @@ fun setMutableText(view: TextView, text: MutableLiveData<String>?) {
 
 @BindingAdapter("bindImageUrl")
 fun loadImage(view: CircleImageView, imageUrl: String) {
-    if(view.context!=null){
+    if (view.context != null) {
         Glide.with(view.context)
                 .load(imageUrl)
                 .into(view)
@@ -55,11 +55,25 @@ fun loadImage(view: CircleImageView, imageUrl: String) {
 fun setSuggestionList(view: AutoCompleteTextView, listOfSuggestion: MutableLiveData<MutableList<Locality>>?) {
     val parentActivity: AppCompatActivity? = view.getParentActivity()
     if (parentActivity != null && listOfSuggestion != null) {
+        view.setThreshold(1)
         listOfSuggestion.observe(parentActivity, Observer {
             val adapter = ArrayAdapter<Locality>(parentActivity, android.R.layout.simple_list_item_1, it)
             view.setAdapter(adapter)
-        })
-    }
+
+            view.setOnTouchListener(object : View.OnTouchListener {
+                override fun onTouch(v: View?, event: MotionEvent?): Boolean {
+                    // show all suggestions
+                    if (!view.getText().toString().equals(""))
+                        adapter.getFilter().filter(view.getText().toString())
+                    view.showDropDown()
+                    return false
+                }
+            })
+    })
+
+
+}
+
 }
 
 @BindingAdapter("bindListToSpinner")

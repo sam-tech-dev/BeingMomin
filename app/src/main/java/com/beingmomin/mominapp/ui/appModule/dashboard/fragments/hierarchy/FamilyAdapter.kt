@@ -44,7 +44,7 @@ class FamilyAdapter  : RecyclerView.Adapter<FamilyAdapter.viewHolder>() {
     }
 
 
-    class viewHolder( var binding: LayoutFamilyShowBinding) : RecyclerView.ViewHolder(binding.root){
+    class viewHolder( var binding: LayoutFamilyShowBinding ) : RecyclerView.ViewHolder(binding.root){
 
         private var viewModel = ShowFamilyModel()
         fun bind(ancestor: Ancestor){

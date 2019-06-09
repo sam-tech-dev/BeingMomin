@@ -160,21 +160,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc340cac-d26a-40ac-8de7-60ec735b4090" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetFamiliesResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetLocalitiesResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/frontMost/FrontMostFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/frontMost/FrontMostNavigator.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/frontMost/FrontMostViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/FamilyAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyNavigator.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/PersonAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/RecyclerViewModels.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_frontmost.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_family_show.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/simple_list_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -185,26 +170,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ViewModelProviderFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ViewModelProviderFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/CustomPersonSearchEditText.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/CustomPersonSearchEditText.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/ShowPersonItemViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/ShowPersonItemViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/DataManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/DataManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/RequestBodies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/RequestBodies.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/reponses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/reponses.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiEndPoint.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiEndPoint.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/AppApiHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/AppApiHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/FragmentBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/di/builder/FragmentBuilder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/DashboardActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/FamilyAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/FamilyAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_search_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_search_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/app_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/app_drawer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -242,11 +216,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+            <state relative-caret-position="1602">
+              <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -254,29 +228,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/FamilyAdapter.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-              <folding>
-                <element signature="e#76#477#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetFamiliesResponse.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="216">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -285,8 +238,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
+            <state relative-caret-position="486">
+              <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
             </state>
           </provider>
         </entry>
@@ -310,6 +263,7 @@
       <find>android:attr/progressBarStyleLarge</find>
       <find>Read_PHO</find>
       <find>dp</find>
+      <find>performFiltering</find>
     </findStrings>
     <replaceStrings>
       <replace>AddPersonViewModel</replace>
@@ -357,7 +311,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/simple_list_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/reponses.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetLocalitiesResponse.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/customs/customPersonSearch/CustomPersonSearchEditText.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/remote/ApiEndPoint.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/RequestBodies.kt" />
@@ -369,19 +322,20 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_family_show.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/data/network/models/GetFamiliesResponse.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/FamilyAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="209" />
-    <option name="y" value="286" />
-    <option name="width" value="1279" />
-    <option name="height" value="696" />
+    <option name="x" value="89" />
+    <option name="y" value="80" />
+    <option name="width" value="1277" />
+    <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -393,64 +347,21 @@
     <panes>
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="mominapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="mominapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="mominapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="appModule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeingMomin" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="mominapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ToolWindowFind.ShowToolbar" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="device.picker.selection" value="4d0083a3d49bc100" />
+    <property name="device.picker.selection" value="49b175ed" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$USER_HOME$/AndroidExamples/android-mvvm-architecture-master" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="project.structure.last.edited" value="Suggestions" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="instant.run" />
   </component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Default Config" />
@@ -635,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558516214697</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update">
+      <created>1559285089730</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1559285089730</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -653,27 +571,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <layout>
       <window_info id="Resources Explorer" order="0" sideWeight="0.5032258" side_tool="true" weight="0.3250996" />
       <window_info id="Captures" order="1" side_tool="true" weight="0.24940239" />
       <window_info id="Structure" order="2" sideWeight="0.5016129" side_tool="true" weight="0.2501992" />
       <window_info id="Favorites" order="3" sideWeight="0.5016129" side_tool="true" weight="0.21035856" />
-      <window_info id="Build Variants" order="4" sideWeight="0.5016129" side_tool="true" weight="0.2501992" />
+      <window_info id="Build Variants" order="4" sideWeight="0.5032258" side_tool="true" weight="0.25737053" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info x="206" y="363" width="1301" height="744" id="Component Tree" order="8" side_tool="true" type="FLOATING" />
-      <window_info content_ui="combo" id="Project" order="9" sideWeight="0.4967742" visible="true" weight="0.25737053" />
+      <window_info content_ui="combo" id="Project" order="9" sideWeight="0.4967742" weight="0.25737053" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.5250404" />
       <window_info anchor="bottom" id="Debug" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="3" weight="0.5467742" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32956383" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="5" visible="true" weight="0.32903227" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="5" visible="true" weight="0.32258064" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32956383" />
-      <window_info anchor="bottom" id="Build" order="8" weight="0.6919355" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.6935484" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32419354" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -719,7 +637,8 @@
     <MESSAGE value="ambassador" />
     <MESSAGE value="search dialog implementing" />
     <MESSAGE value="add profile photo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add profile photo" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -758,20 +677,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="151" column="57" selection-start-line="151" selection-start-column="57" selection-end-line="151" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.0/98515ba3feb571f93b923e61f643bdaed59d14ac/kotlin-stdlib-1.3.0-sources.jar!/kotlin/collections/MutableCollectionsJVM.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -795,24 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/android/widget/AutoCompleteTextView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="972" column="19" selection-start-line="972" selection-start-column="19" selection-end-line="972" selection-end-column="19" />
-          <folding>
-            <element signature="e#35903#35904#0" expanded="true" />
-            <element signature="e#35945#35946#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/android/widget/Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-821">
-          <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1014,14 +901,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_family_row.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_family_row.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_frontmost.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -1047,13 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_person_show.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -1069,34 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_family_show.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding>
-            <element signature="e#1597#1611#0" expanded="true" />
-            <element signature="e#2300#2314#0" expanded="true" />
-            <element signature="e#2977#2991#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/RecyclerViewModels.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1107,17 +952,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        <state relative-caret-position="125">
+          <caret line="31" column="79" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -1128,13 +966,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/android/widget/ArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="520" column="27" selection-start-line="520" selection-start-column="27" selection-end-line="520" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="6868" column="16" selection-start-line="6868" selection-start-column="16" selection-end-line="6868" selection-end-column="16" />
+          <folding>
+            <element signature="e#275324#275325#0" expanded="true" />
+            <element signature="e#275378#275379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/android/widget/AutoCompleteTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="1213" column="15" lean-forward="true" selection-start-line="1213" selection-start-column="15" selection-end-line="1213" selection-end-column="15" />
+          <folding>
+            <element signature="e#35903#35904#0" expanded="true" />
+            <element signature="e#35945#35946#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/android/widget/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
+          <folding>
+            <element signature="e#2781#2782#0" expanded="true" />
+            <element signature="e#2821#2822#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/utils/BindingAdapters.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+          <folding>
+            <element signature="e#39#664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_family_show.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/FamilyAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+        <state relative-caret-position="529">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
           <folding>
             <element signature="e#76#477#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hierachy.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beingmomin/mominapp/ui/appModule/dashboard/fragments/hierarchy/HierarchyFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
         </state>
       </provider>
     </entry>

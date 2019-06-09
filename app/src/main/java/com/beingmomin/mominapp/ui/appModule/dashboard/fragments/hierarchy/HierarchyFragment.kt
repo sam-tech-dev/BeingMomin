@@ -104,7 +104,7 @@ class HierarchyFragment : BaseFragment<FragmentHomeBinding, HierarchyViewModel>(
             }
         })
 
-        atv_locality.setOnItemClickListener { parent, view, position, id ->
+        et_locality.setOnItemClickListener { parent, view, position, id ->
             viewModel.getFamilies(GetFamiliesBody((parent.getItemAtPosition(position) as Locality).localityId))
         }
     }

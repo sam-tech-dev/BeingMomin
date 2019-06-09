@@ -19,6 +19,7 @@ class HierarchyViewModel(val dataManager: DataManager, schedulerProvider: Schedu
     var familyAdapter = FamilyAdapter()
     val mIsPersonLoading = ObservableBoolean(false)
     val mIsFamiliesLoading = ObservableBoolean(false)
+    val mIsFamiliesShow = ObservableBoolean(false)
 
     init {
         listOfGenders.value = mutableListOf("Male", "Female")
@@ -71,6 +72,7 @@ class HierarchyViewModel(val dataManager: DataManager, schedulerProvider: Schedu
                 .observeOn(getSchedulerProvider().ui())
                 .subscribe({ response ->
                     mIsFamiliesLoading.set(false)
+                    mIsFamiliesShow.set(true)
                     familyAdapter.updateAncestorList(response.ancestors)
 
                 }, { throwable ->
