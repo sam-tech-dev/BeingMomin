@@ -18,7 +18,7 @@ import de.hdodenhof.circleimageview.CircleImageView
 
 
 @BindingAdapter("adapter")
-fun setAdapter(view: androidx.recyclerview.widget.RecyclerView, adapter: androidx.recyclerview.widget.RecyclerView.Adapter<*>) {
+fun setAdapter(view: androidx.recyclerview.widget.RecyclerView, adapter: androidx.recyclerview.widget.RecyclerView.Adapter<*>?) {
     view.adapter = adapter
 }
 

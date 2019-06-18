@@ -4,6 +4,8 @@ import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addPerson.AddP
 import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.home.HomeFragment
 import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.frontMost.FrontMostFragment
 import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.hierarchy.HierarchyFragment
+import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.hierarchy.SearchByLocalityFragment
+import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.hierarchy.SearchByPersonFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -21,5 +23,12 @@ abstract class FragmentBuilder {
 
     @ContributesAndroidInjector
     abstract fun bindHierarchyFragment(): HierarchyFragment
+
+    @ContributesAndroidInjector
+    abstract fun bindSearchByPersonFragment(): SearchByPersonFragment
+
+    @ContributesAndroidInjector
+    abstract fun bindSearchByLocalityFragment(): SearchByLocalityFragment
+
 
 }
