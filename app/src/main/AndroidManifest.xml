@@ -55,6 +55,12 @@
         <activity
             android:name="com.beingmomin.mominapp.ui.ambassadorModule.localitySearch.LocalitySearchActivity"
             android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.beingmomin.mominapp.ui.appModule.familyHierarchy.FamilyHierarchyActivity"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name=".ui.appModule.detailedPerson.DetailedPersonActivity"/>
     </application>
 
 </manifest>

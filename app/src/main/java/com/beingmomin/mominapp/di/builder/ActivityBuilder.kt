@@ -9,6 +9,8 @@ import com.beingmomin.mominapp.ui.ambassadorModule.main.MainActivityModule
 import com.beingmomin.mominapp.ui.ambassadorModule.showLocality.ShowLocalityActivity
 import com.beingmomin.mominapp.ui.ambassadorModule.signIn.SignInActivity
 import com.beingmomin.mominapp.ui.appModule.dashboard.DashboardActivity
+import com.beingmomin.mominapp.ui.appModule.detailedPerson.DetailedPersonActivity
+import com.beingmomin.mominapp.ui.appModule.familyHierarchy.FamilyHierarchyActivity
 import com.beingmomin.mominapp.ui.appModule.splash.SplashActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -39,5 +41,11 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = arrayOf(FragmentBuilder::class))
     abstract fun bindDashboardActivity(): DashboardActivity
+
+    @ContributesAndroidInjector
+    abstract fun bindFamilyHierarchyActivity(): FamilyHierarchyActivity
+
+    @ContributesAndroidInjector
+    abstract fun bindDetailedPersonctivity(): DetailedPersonActivity
 
 }

@@ -14,6 +14,8 @@ import com.beingmomin.mominapp.ui.ambassadorModule.signIn.SignInViewModel
 import com.beingmomin.mominapp.ui.appModule.dashboard.DashboardViewModel
 import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.frontMost.FrontMostViewModel
 import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.hierarchy.HierarchyViewModel
+import com.beingmomin.mominapp.ui.appModule.detailedPerson.DetailedPersonViewModel
+import com.beingmomin.mominapp.ui.appModule.familyHierarchy.FamilyHierarchyViewModel
 import com.beingmomin.mominapp.ui.appModule.splash.SplashViewModel
 import com.beingmomin.mominapp.utils.rx.SchedulerProvider
 import javax.inject.Inject
@@ -62,6 +64,12 @@ constructor(private val dataManager: DataManager,
 
         }else if (modelClass.isAssignableFrom(HierarchyViewModel::class.java)) {
             return HierarchyViewModel(dataManager,schedulerProvider) as T
+
+        }else if (modelClass.isAssignableFrom(FamilyHierarchyViewModel::class.java)) {
+            return FamilyHierarchyViewModel(dataManager,schedulerProvider) as T
+
+        }else if (modelClass.isAssignableFrom(DetailedPersonViewModel::class.java)) {
+            return DetailedPersonViewModel(dataManager,schedulerProvider) as T
         }
 
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

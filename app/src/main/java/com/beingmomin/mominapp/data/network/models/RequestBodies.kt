@@ -44,4 +44,12 @@ data class GetFamiliesBody(
 		@SerializedName("localityId")var localityId:Int
 )
 
+data class GetFamilyHierarchyBody(
+		@SerializedName("personId")var personId:Int
+)
+
+data class GetDetailedPersonBody(
+		@SerializedName("personId")var personId:Int
+)
+
 

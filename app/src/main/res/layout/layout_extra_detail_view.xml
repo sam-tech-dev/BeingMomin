@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_extra_detail"
+        android:layout_gravity="center"
+        android:textColor="@color/black_tint5"
+        android:textSize="@dimen/font_14"
+        android:text="Contact me on 9982854547" />
+
+</FrameLayout>

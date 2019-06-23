@@ -19,4 +19,10 @@ object ApiEndPoint {
 
     const val ENDPOINT_GET_FAMILIES = BuildConfig.BASE_URL + BuildConfig.API_EXT + "get-families"
 
+    const val ENDPOINT_GET_FAMILY_HIERARCHY = BuildConfig.BASE_URL + BuildConfig.API_EXT + "get-family-hierarchy"
+
+    const val ENDPOINT_GET_DETAILED_PERSON = BuildConfig.BASE_URL + BuildConfig.API_EXT + "get-detailed-person"
+
+
+
 }

@@ -27,25 +27,30 @@ android {
     buildTypes {
         debug {
             buildConfigField("String", "environment", "\"development\"")
-
-            //office local url
-            //buildConfigField("String", "BASE_URL", "\"http://172.20.5.148:8000/\"")
-
-            //PG local url
-            buildConfigField("String", "BASE_URL", "\"http://192.168.8.19:8000/\"")
-
             buildConfigField("String", "API_EXT", "\"AmbassadorPortal/\"")
 
         }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
             buildConfigField("String", "environment", "\"release\"")
             buildConfigField("String", "BASE_URL", "\"http://data.grampower.com/\"")
             buildConfigField("String", "API_EXT", "\"v3_field_force/field_force_app/\"")
         }
 
+    }
+
+    flavorDimensions "environment"
+    productFlavors {
+        home {
+            dimension "environment"
+            buildConfigField("String", "BASE_URL", "\"http://192.168.8.19:8000/\"")
+        }
+
+        office {
+            dimension "environment"
+            buildConfigField("String", "BASE_URL", "\"http://172.20.5.49:8000/\"")
+        }
     }
 }
 

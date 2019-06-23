@@ -9,6 +9,7 @@ import com.beingmomin.mominapp.R
 import com.beingmomin.mominapp.customs.customPersonSearch.ShowPersonItemViewModel
 import com.beingmomin.mominapp.data.network.models.Person
 import com.beingmomin.mominapp.databinding.LayoutPersonShowBinding
+import com.beingmomin.mominapp.ui.appModule.detailedPerson.DetailedPersonActivity
 
 
 class PersonAdapter  : RecyclerView.Adapter<PersonAdapter.viewHolder>() {
@@ -32,7 +33,8 @@ class PersonAdapter  : RecyclerView.Adapter<PersonAdapter.viewHolder>() {
         val person=listOfPersons.get(position)
         holder.bind(person)
         holder.binding.cvPerson.setOnClickListener {
-
+         val intent = DetailedPersonActivity.newIntent(context, person.id)
+            context.startActivity(intent)
         }
     }
 

@@ -57,6 +57,12 @@ class DataManager @Inject constructor( private  val appPrefHelper: AppPreference
 
     override fun doGetFamiliesApiCall(request: GetFamiliesBody): Single<GetFamiliesResponse> = apiHelper.doGetFamiliesApiCall(request)
 
+    override fun doGetFamilyHierarchyApiCall(request: GetFamilyHierarchyBody): Single<GetFamilyHierarchyResponse> = apiHelper.doGetFamilyHierarchyApiCall(request)
+
+    override fun doGetDetailedPersonApiCall(request: GetDetailedPersonBody): Single<GetDetailedPersonResponse> = apiHelper.doGetDetailedPersonApiCall(request)
+
+
+
     /**
      * end of api call functions
      */

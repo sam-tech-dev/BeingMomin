@@ -83,4 +83,20 @@ class AppApiHelper @Inject constructor(val apiHeader: ApiHeader) : ApiHelper {
                 .build()
                 .getObjectSingle<GetFamiliesResponse>(GetFamiliesResponse::class.java)
     }
+
+    override fun doGetFamilyHierarchyApiCall(request: GetFamilyHierarchyBody): Single<GetFamilyHierarchyResponse> {
+        return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_GET_FAMILY_HIERARCHY)
+                .addApplicationJsonBody(request)
+                .build()
+                .getObjectSingle<GetFamilyHierarchyResponse>(GetFamilyHierarchyResponse::class.java)
+
+    }
+
+    override fun doGetDetailedPersonApiCall(request: GetDetailedPersonBody): Single<GetDetailedPersonResponse> {
+        return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_GET_DETAILED_PERSON)
+                .addApplicationJsonBody(request)
+                .build()
+                .getObjectSingle<GetDetailedPersonResponse>(GetDetailedPersonResponse::class.java)
+
+    }
 }

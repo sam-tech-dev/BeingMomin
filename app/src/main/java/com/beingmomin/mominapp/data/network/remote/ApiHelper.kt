@@ -20,4 +20,10 @@ interface ApiHelper {
     fun doGetLocalitiesApiCall(): Single<GetLocalitiesResponse>
 
     fun doGetFamiliesApiCall(request: GetFamiliesBody): Single<GetFamiliesResponse>
+
+    fun doGetFamilyHierarchyApiCall(request: GetFamilyHierarchyBody): Single<GetFamilyHierarchyResponse>
+
+    fun doGetDetailedPersonApiCall(request: GetDetailedPersonBody): Single<GetDetailedPersonResponse>
+
+
 }
