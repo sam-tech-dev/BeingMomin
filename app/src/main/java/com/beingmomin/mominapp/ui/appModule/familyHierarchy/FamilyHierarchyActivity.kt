@@ -11,6 +11,7 @@ import com.beingmomin.mominapp.R
 import com.beingmomin.mominapp.ViewModelProviderFactory
 import com.beingmomin.mominapp.data.network.models.Children
 import com.beingmomin.mominapp.databinding.ActivityFamilyHierarchyBinding
+import com.beingmomin.mominapp.ui.appModule.detailedPerson.DetailedPersonActivity
 import com.beingmomin.mominapp.ui.base.BaseActivity
 import com.beingmomin.mominapp.utils.ViewUtils
 import kotlinx.android.synthetic.main.activity_family_hierarchy.*
@@ -59,31 +60,57 @@ class FamilyHierarchyActivity : BaseActivity<ActivityFamilyHierarchyBinding, Fam
         showToast(throwable.message!!)
     }
 
+    private fun redirectToDetailedPerson(personId: Int) {
+        val intent = DetailedPersonActivity.newIntent(this, personId)
+        startActivity(intent)
+    }
 
     override fun inflateHierarchy(root: Children?, child: Children, index: Int) {
 
         val personView = layoutInflater.inflate(R.layout.layout_hierarchy_child, null)
         personView.tv_person_name.text = child.name
+        personView.tv_person_name.setOnClickListener {
+            redirectToDetailedPerson(child.personId)
+        }
+
+        if (child.wifeName != null && child.wifeName.isNotEmpty()) {
+            personView.tv_partner_with.visibility = View.VISIBLE
+            personView.tv_partner_name.visibility = View.VISIBLE
+            personView.tv_partner_name.text = child.wifeName
+            personView.tv_partner_name.setOnClickListener {
+                redirectToDetailedPerson(child.wifeId)
+            }
+        } else {
+            if(child.children!=null && child.children.size>0){
+                personView.tv_partner_with.visibility = View.VISIBLE
+                personView.tv_partner_name.visibility = View.VISIBLE
+                personView.tv_partner_name.text = "Not recorded"
+            }else{
+                personView.tv_partner_with.visibility = View.GONE
+                personView.tv_partner_name.visibility = View.GONE
+            }
+
+        }
 
         if (child.children == null || child.children.size == 0) {
             personView.v_vertical_bottom_line.visibility = View.INVISIBLE
         } else {
             val lineParams = personView.v_horizontal_top_line_left.layoutParams
-            lineParams.width = ViewUtils.dpToPx((30f * child.spaceVal))
+            lineParams.width = ViewUtils.dpToPx((40f * child.spaceVal))
             personView.v_horizontal_top_line_left.layoutParams = lineParams
 
             val lineParamsRight = personView.v_horizontal_top_line_right.layoutParams
-            lineParamsRight.width = ViewUtils.dpToPx((30f * child.spaceVal))
+            lineParamsRight.width = ViewUtils.dpToPx((40f * child.spaceVal))
             personView.v_horizontal_top_line_right.layoutParams = lineParamsRight
         }
 
         if (root != null) {
             if (index == 0) {
                 personView.v_horizontal_top_line_left.visibility = View.INVISIBLE
-                if (root.children.size == 1) {
+                if (root.children?.size == 1) {
                     personView.v_horizontal_top_line_right.visibility = View.INVISIBLE
                 }
-            } else if (index == root.children.size - 1) {
+            } else if (index == root.children!!.size - 1) {
                 personView.v_horizontal_top_line_right.visibility = View.INVISIBLE
             }
         } else {
@@ -107,7 +134,7 @@ class FamilyHierarchyActivity : BaseActivity<ActivityFamilyHierarchyBinding, Fam
                 constraintSet.connect(child.personId, ConstraintSet.LEFT, child.fatherId, ConstraintSet.LEFT)
             } else {
                 constraintSet.connect(child.personId, ConstraintSet.TOP, child.fatherId, ConstraintSet.BOTTOM)
-                constraintSet.connect(child.personId, ConstraintSet.LEFT, root!!.children.get(index - 1).personId, ConstraintSet.RIGHT)
+                constraintSet.connect(child.personId, ConstraintSet.LEFT, root!!.children!!.get(index - 1).personId, ConstraintSet.RIGHT)
             }
         }
         constraintSet.applyTo(cnstrt_hierarchy)

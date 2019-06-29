@@ -42,11 +42,14 @@ fun setMutableText(view: TextView, text: MutableLiveData<String>?) {
 
 
 @BindingAdapter("bindImageUrl")
-fun loadImage(view: CircleImageView, imageUrl: String) {
-    if (view.context != null) {
-        Glide.with(view.context)
-                .load(imageUrl)
-                .into(view)
+fun loadImage(view: CircleImageView, imageUrl: MutableLiveData<String?>?) {
+    val parentActivity: AppCompatActivity? = view.getParentActivity()
+    if (parentActivity != null && imageUrl != null) {
+        imageUrl.observe(parentActivity, Observer {value ->
+            if(value!=null && value.isNotEmpty()){
+                Glide.with(view.context).load(value).into(view)
+            }
+        })
     }
 
 }

@@ -6,25 +6,24 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <View
             android:id="@+id/v_horizontal_top_line_left"
-            android:layout_width="30dp"
+            android:layout_width="40dp"
             android:layout_height="2dp"
             android:layout_gravity="center_horizontal"
             android:background="@color/black_tint5" />
 
         <View
             android:id="@+id/v_horizontal_top_line_right"
-            android:layout_width="30dp"
+            android:layout_width="40dp"
             android:layout_height="2dp"
             android:layout_gravity="center_horizontal"
             android:background="@color/black_tint5" />
 
     </LinearLayout>
-
 
 
     <View
@@ -38,18 +37,51 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/boundary_background"
-        android:padding="@dimen/dp_5">
+        android:padding="@dimen/dp_7">
 
         <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewMedium
+            android:id="@+id/tv_person_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
-            android:id="@+id/tv_person_name"
-            android:maxWidth="@dimen/dp_40"
+            android:maxWidth="@dimen/dp_60"
             android:maxLines="2"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
             android:text="Sattar Mohammad"
             android:textColor="@color/black_tint4"
             android:textSize="@dimen/dp_12" />
+
+
+        <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+            android:id="@+id/tv_partner_with"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_person_name"
+            android:text="partner with"
+            android:paddingVertical="@dimen/dp_5"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/light_white"
+            android:textSize="@dimen/dp_8" />
+
+
+        <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewMedium
+            android:id="@+id/tv_partner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/dp_60"
+            android:maxLines="2"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:text="Shabnam Bano"
+            android:layout_below="@+id/tv_partner_with"
+            android:textColor="@color/black_tint4"
+            android:textSize="@dimen/dp_12" />
+
+
 
     </RelativeLayout>
 

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.appModule.familyHierarchy.FamilyHierarchyActivity">
+    tools:context=".ui.appModule.detailedPerson.DetailedPersonActivity">
 
     <data>
 
@@ -13,152 +13,167 @@
     </data>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_show_person"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            android:theme="@style/ToolbarDarkOverflow"
-            app:contentInsetLeft="0dp"
-            app:contentInsetStart="0dp"
-            app:layout_collapseMode="pin"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
+            android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/ll_back_show_task"
-                android:layout_width="?actionBarSize"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/back_layout_background"
-                android:padding="@dimen/dp_10"
-                android:src="@drawable/ic_arrow_back_white_24dp" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_show_person"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:theme="@style/ToolbarDarkOverflow"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
 
-            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                <ImageButton
+                    android:id="@+id/ll_back_show_task"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/back_layout_background"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_arrow_back_white_24dp" />
+
+                <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Person"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/toolbar_text_size"
+                    tools:layout_editor_absoluteX="56dp"
+                    tools:layout_editor_absoluteY="14dp" />
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Show Person"
-                android:textColor="@color/white"
-                android:textSize="@dimen/toolbar_text_size"
-                tools:layout_editor_absoluteX="56dp"
-                tools:layout_editor_absoluteY="14dp" />
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="10dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="10dp" />
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewMedium
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black_tint3"
+                android:textSize="@dimen/font_20"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/iv_profile_pic"
+                app:mutableText="@{viewModel.nameOfPerson}"
+                tools:text="Sattar Mohammad" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                app:bindImageUrl="@{viewModel.profilePicUrl}"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_show_person" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gt_walsheim_regular"
+                android:textColor="@color/black_tint5"
+                android:textSize="@dimen/font_15"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:mutableText="@{viewModel.primaryDetails}" />
+
+            <TextView
+                android:id="@+id/tv_education_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gt_walsheim_regular"
+                android:textColor="@color/black_tint5"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/rv_extra_details"
+                app:mutableText="@{viewModel.educationKey}"
+                android:visibility="@{viewModel.mIsEducationKeyAvailable? View.VISIBLE : View.GONE}"
+                tools:text="Graduate"
+                 />
+
+            <TextView
+                android:id="@+id/tv_know_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/gt_walsheim_regular"
+                android:text="Show more"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/font_8"
+                android:paddingVertical="@dimen/dp_3"
+                android:visibility="@{viewModel.mIsEducationDetailsAvailable? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_education_key"
+                app:layout_constraintStart_toEndOf="@+id/tv_education_key"
+                app:layout_constraintTop_toTopOf="@+id/tv_education_key"
+                app:layout_constraintVertical_bias="0.65" />
+
+            <TextView
+                android:id="@+id/tv_education_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gt_walsheim_regular"
+                android:textSize="@dimen/font_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_education_key"
+                app:mutableText="@{viewModel.educationDetails}"
+                tools:text="Graduate  from IIIT Kota with 8 CGPA" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_extra_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adapter="@{viewModel.extraDetailedAdapter}"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_family_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adapter="@{viewModel.familyGroupAdapter}"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_education_details" />
 
 
-        </androidx.appcompat.widget.Toolbar>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="20dp" />
+    </androidx.core.widget.NestedScrollView>
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_end="20dp" />
-
-        <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewMedium
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/black_tint3"
-            android:textSize="@dimen/font_20"
-            android:textStyle="bold"
-            app:mutableText="${viewModel.nameOfPerson}"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            tools:text="Sattar Mohammad" />
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imageView2"
-            android:layout_width="80dp"
-            app:bindImageUrl="${viewModel.profileUrl}"
-            android:layout_height="80dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_show_person"
-            app:srcCompat="@drawable/ic_profile" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/gt_walsheim_regular"
-            android:textColor="@color/black_tint5"
-            android:textSize="@dimen/font_15"
-            app:mutableText="${viewModel.primaryDetails}"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/textView6"
-             />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/gt_walsheim_regular"
-            android:textColor="@color/black_tint5"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-            tools:text="Graduate" />
-
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/gt_walsheim_regular"
-            android:textColor="@color/colorSecondary"
-            android:textSize="@dimen/font_8"
-            app:layout_constraintEnd_toEndOf="@+id/textView16"
-            app:layout_constraintTop_toBottomOf="@+id/textView16"
-            tools:text="Know more" />
-
-        <TextView
-            android:id="@+id/textView18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/gt_walsheim_regular"
-            android:textSize="@dimen/font_12"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/textView17"
-            tools:text="Graduate  from IIIT Kota with 8 CGPA" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="0dp"
-            app:adapter="${viewModel.extraDetailedAdapter}"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

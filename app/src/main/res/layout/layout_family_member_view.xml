@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cnsrt_member_layout"
+        android:paddingVertical="@dimen/dp_17">
+
+        <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewMedium
+            android:id="@+id/tv_member_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black_tint3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Alladin Mohammad" />
+
+        <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+            android:id="@+id/tv_member_relation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/brown_tint1"
+            android:textSize="@dimen/font_10"
+            android:textStyle="italic"
+            android:paddingStart="@dimen/dp_3"
+            app:layout_constraintStart_toStartOf="@+id/tv_member_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_member_name"
+            tools:text="Father" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

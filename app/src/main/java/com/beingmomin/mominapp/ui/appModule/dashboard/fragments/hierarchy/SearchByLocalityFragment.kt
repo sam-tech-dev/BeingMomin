@@ -1,7 +1,6 @@
 package com.beingmomin.mominapp.ui.appModule.dashboard.fragments.hierarchy
 
 import android.os.Bundle
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +13,7 @@ import com.beingmomin.mominapp.ViewModelProviderFactory
 import com.beingmomin.mominapp.data.network.models.GetFamiliesBody
 import com.beingmomin.mominapp.data.network.models.Locality
 import com.beingmomin.mominapp.databinding.LayoutSearchByLocalityBinding
+import com.beingmomin.mominapp.ui.ambassadorModule.signIn.SignInActivity
 import dagger.android.support.AndroidSupportInjection
 import kotlinx.android.synthetic.main.layout_search_by_locality.view.*
 import javax.inject.Inject
@@ -53,7 +53,9 @@ class SearchByLocalityFragment : Fragment() {
             viewModel.getFamilies(GetFamiliesBody((parent.getItemAtPosition(position) as Locality).localityId))
         }
 
-        view.tv_request_to_register.setText(Html.fromHtml("Search your locality below \n if your locality not found the <a>click to register </a>"))
+        view.tv_request_to_register.setOnClickListener {
+          context?.startActivity(SignInActivity.newIntent(context!!))
+        }
 
         view.rcv_families.layoutManager = LinearLayoutManager(context)
     }

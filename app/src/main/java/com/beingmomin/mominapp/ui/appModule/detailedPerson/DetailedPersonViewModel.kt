@@ -1,6 +1,7 @@
 package com.beingmomin.mominapp.ui.appModule.detailedPerson
 
 import android.os.Bundle
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.MutableLiveData
 import com.beingmomin.mominapp.data.DataManager
 import com.beingmomin.mominapp.data.network.models.GetDetailedPersonBody
@@ -13,9 +14,14 @@ class DetailedPersonViewModel constructor(val dataManager: DataManager, schedule
 
     var primaryDetails = MutableLiveData<String>()
     var nameOfPerson = MutableLiveData<String>()
-    var profileUrl = MutableLiveData<String>()
+    var educationKey = MutableLiveData<String>()
+    var educationDetails = MutableLiveData<String>()
+    var profilePicUrl = MutableLiveData<String>()
     var extraDetailedAdapter = ExtraDetailAdapter()
+    var familyGroupAdapter = FamilyGroupAdapter()
 
+    val mIsEducationKeyAvailable = ObservableBoolean(false)
+    val mIsEducationDetailsAvailable = ObservableBoolean(false)
 
     init {
 
@@ -34,7 +40,7 @@ class DetailedPersonViewModel constructor(val dataManager: DataManager, schedule
                     if (response.status == 0) {
                         setLayoutView(response.data)
                     } else {
-                        //TODO handle error
+                        //
                     }
                 }, { throwable ->
                     setIsLoading(false)
@@ -44,11 +50,17 @@ class DetailedPersonViewModel constructor(val dataManager: DataManager, schedule
     }
 
     private fun setLayoutView(personData: PersonData) {
+
         nameOfPerson.value = personData.name
-        profileUrl.value = personData.profilePicUrl
+        if (personData.profilePicUrl != null && personData.profilePicUrl.isNotEmpty()) {
+            profilePicUrl.value = personData.profilePicUrl
+        } else {
+            getNavigator()!!.setProfilePlaceholder(personData.gender)
+        }
+
         var primary = personData.gender
         if (personData.maritalStatus != null && personData.maritalStatus.isNotEmpty()) {
-            primary = "$primary | $personData.maritalStatus"
+            primary = "$primary | ${personData.maritalStatus}"
         }
         if (personData.profession != null && personData.profession.isNotEmpty()) {
             primary = "$primary | ${personData.profession}"
@@ -58,9 +70,19 @@ class DetailedPersonViewModel constructor(val dataManager: DataManager, schedule
         } else {
             primary = "$primary | No more"
         }
-        primaryDetails.value= primary
-        extraDetailedAdapter.updateExtraDetailList(personData.extraDetails)
 
+        primaryDetails.value = primary
+        extraDetailedAdapter.updateExtraDetailList(personData.extraDetails)
+        familyGroupAdapter.updateFamilyGroupsList(personData.family)
+        if (personData.educationKey != null && personData.educationKey.isNotEmpty()) {
+            educationKey.value = personData.educationKey
+            mIsEducationKeyAvailable.set(true)
+        }
+
+        if (personData.educationDeatils != null && personData.educationDeatils.isNotEmpty()) {
+            mIsEducationDetailsAvailable.set(true)
+            educationDetails.value = personData.educationDeatils
+        }
 
     }
 

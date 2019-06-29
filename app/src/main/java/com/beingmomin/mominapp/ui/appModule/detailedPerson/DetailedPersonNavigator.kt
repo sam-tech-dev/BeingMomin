@@ -4,4 +4,6 @@ interface DetailedPersonNavigator {
 
     fun onHandleError(throwable: Throwable)
 
+    fun setProfilePlaceholder(gender:String)
+
 }

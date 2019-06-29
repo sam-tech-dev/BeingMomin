@@ -46,6 +46,6 @@ abstract class ActivityBuilder {
     abstract fun bindFamilyHierarchyActivity(): FamilyHierarchyActivity
 
     @ContributesAndroidInjector
-    abstract fun bindDetailedPersonctivity(): DetailedPersonActivity
+    abstract fun bindDetailedPersonActivity(): DetailedPersonActivity
 
 }
