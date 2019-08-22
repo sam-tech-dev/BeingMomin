@@ -35,6 +35,14 @@ class DataManager @Inject constructor( private  val appPrefHelper: AppPreference
 
     override fun clearAppPreferences() = appPrefHelper.clearAppPreferences()
 
+    override fun setUserId(userid: Int) = appPrefHelper.setUserId(userid)
+
+    override fun getUserId(): Int =appPrefHelper.getUserId()
+
+    override fun setLocalityId(localityid: Int)= appPrefHelper.setLocalityId(localityid)
+
+    override fun getLocalityId(): Int = appPrefHelper.getLocalityId()
+
     /**
      * end of shared preferences functions
      */
@@ -61,7 +69,7 @@ class DataManager @Inject constructor( private  val appPrefHelper: AppPreference
 
     override fun doGetDetailedPersonApiCall(request: GetDetailedPersonBody): Single<GetDetailedPersonResponse> = apiHelper.doGetDetailedPersonApiCall(request)
 
-
+    override fun doAddNewsApiCall(request: AddNewsApiBody, newsAttachment: File?): Single<AddNewsResponse> = apiHelper.doAddNewsApiCall(request,newsAttachment)
 
     /**
      * end of api call functions

@@ -34,6 +34,7 @@ class LocalitySearchActivity : BaseActivity<ActivitySearchLocalityBinding,Locali
         mActivityLocalitySearchBinding = getViewDataBinding()
 
         rcv_localities.layoutManager= LinearLayoutManager(this)
+        rcv_localities.adapter
 
         et_search_locality.addTextChangedListener(object : TextWatcher{
 

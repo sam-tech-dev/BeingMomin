@@ -48,6 +48,23 @@ object CommonUtils {
         return mobileNumber.length == 10
     }
 
+    fun validateEditText(edittext: EditText, warning:String): Boolean {
+        if (edittext.text.toString().isNotEmpty()) {
+            return true
+        } else {
+            edittext.setError(warning)
+            return false
+        }
+    }
+
+    fun validateEditText(edittext: EditText): Boolean {
+        if (edittext.text.toString().isNotEmpty()) {
+            return true
+        } else {
+            edittext.setError("Fill the mentioned detail")
+            return false
+        }
+    }
 
     fun showLoadingDialog(context: Context): ProgressDialog {
         val progressDialog = ProgressDialog(context)

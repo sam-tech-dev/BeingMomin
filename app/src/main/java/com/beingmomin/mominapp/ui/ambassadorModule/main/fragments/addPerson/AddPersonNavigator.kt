@@ -5,7 +5,7 @@ interface AddPersonNavigator {
 
     fun goBack()
 
-    fun setLocality(locality:String)
+    fun setLocality(locality:String, localityId: Int)
 
     fun handleError(throwable: Throwable)
 }

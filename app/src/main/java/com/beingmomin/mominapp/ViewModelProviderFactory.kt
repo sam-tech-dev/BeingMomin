@@ -7,6 +7,7 @@ import com.beingmomin.mominapp.ui.ambassadorModule.ambassadorDescription.Ambassa
 import com.beingmomin.mominapp.ui.ambassadorModule.applyForAmbassador.ApplyForAmbassadorViewModel
 import com.beingmomin.mominapp.ui.ambassadorModule.localitySearch.LocalitySearchViewModel
 import com.beingmomin.mominapp.ui.ambassadorModule.main.MainViewModel
+import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addNews.AddNewsViewModel
 import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addPerson.AddPersonViewModel
 import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.home.HomeViewModel
 import com.beingmomin.mominapp.ui.ambassadorModule.showLocality.ShowLocalityViewModel
@@ -70,6 +71,9 @@ constructor(private val dataManager: DataManager,
 
         }else if (modelClass.isAssignableFrom(DetailedPersonViewModel::class.java)) {
             return DetailedPersonViewModel(dataManager,schedulerProvider) as T
+
+        }else if (modelClass.isAssignableFrom(AddNewsViewModel::class.java)) {
+            return AddNewsViewModel(dataManager,schedulerProvider) as T
         }
 
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

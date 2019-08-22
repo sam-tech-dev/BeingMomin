@@ -44,6 +44,11 @@ class SignInViewModel constructor(var dataManager: DataManager,  schedulerProvid
                             dataManager.setAccessToken(response.token)
                             dataManager.setLocality(response.locality)
                             dataManager.setUsername(response.username)
+
+                            dataManager.setLocalityId(response.localityId)
+
+                            dataManager.setUserId(response.userId)
+
                             dataManager.setIsLoginFlag(true)
                             openMainActivity()
                         }

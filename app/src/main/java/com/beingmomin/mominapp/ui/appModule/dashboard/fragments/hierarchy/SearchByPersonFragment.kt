@@ -25,7 +25,7 @@ class SearchByPersonFragment : Fragment() {
     @Inject
     lateinit var factory: ViewModelProviderFactory
     lateinit var viewModel: HierarchyViewModel
-    var locality = ""
+    var localityId = -1
     var gender = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,8 +57,8 @@ class SearchByPersonFragment : Fragment() {
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
-                if (position >= 0)
-                    locality = (parent?.getItemAtPosition(position) as Locality).localityName
+                if (position > 0)
+                    localityId = (parent?.getItemAtPosition(position) as Locality).localityId
             }
         }
 
@@ -76,7 +76,7 @@ class SearchByPersonFragment : Fragment() {
 
         view.sv_person.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
-                viewModel.searchPerson(SearchPersonApiBody(query, locality, gender))
+                viewModel.searchPerson(SearchPersonApiBody(query, localityId, gender))
                 return false
             }
 

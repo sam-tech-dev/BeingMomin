@@ -24,6 +24,7 @@ import com.beingmomin.mominapp.R
 import com.beingmomin.mominapp.ViewModelProviderFactory
 import com.beingmomin.mominapp.customs.customEditText.CustomEditTextRegular
 import com.beingmomin.mominapp.data.network.models.AddPersonApiBody
+import com.beingmomin.mominapp.data.network.models.Locality
 import com.beingmomin.mominapp.databinding.FragmentAddPersonBinding
 import com.beingmomin.mominapp.ui.base.BaseFragment
 import com.beingmomin.mominapp.utils.CommonUtils
@@ -195,10 +196,10 @@ class AddPersonFragment : BaseFragment<FragmentAddPersonBinding, AddPersonViewMo
         }
     }
 
-    override fun setLocality(locality: String) {
-        et_father_name.locality = locality
-        et_mother_name.locality = locality
-        et_partner_name.locality = locality
+    override fun setLocality(locality: String, localityId:Int) {
+        et_father_name.localityObject = Locality(localityId,locality)
+        et_mother_name.localityObject = Locality(localityId,locality)
+        et_partner_name.localityObject = Locality(localityId,locality)
     }
 
     companion object {

@@ -43,28 +43,28 @@ class AppApiHelper @Inject constructor(val apiHeader: ApiHeader) : ApiHelper {
                 .addApplicationJsonBody(request)
                 .build()
                 .getObjectSingle<SearchPersonResponse>(SearchPersonResponse::class.java)
-   }
+    }
 
-    override fun doAddPersonApiCall(request: AddPersonApiBody, profileFile:File): Single<AddPersonResponse> {
+    override fun doAddPersonApiCall(request: AddPersonApiBody, profileFile: File): Single<AddPersonResponse> {
 
         return Rx2AndroidNetworking.upload(ApiEndPoint.ENDPOINT_ADD_PERSONS)
-                .addMultipartFile("profileFile",profileFile)
-                .addMultipartParameter("fullName",request.fullName)
-                .addMultipartParameter("mobileNumber",request.mobileNumber)
-                .addMultipartParameter("dob",request.dob)
-                .addMultipartParameter("email",request.email)
-                .addMultipartParameter("gender",request.gender)
-                .addMultipartParameter("maritalStatus",request.maritalStatus)
-                .addMultipartParameter("lifePartnerId",request.lifeParterId)
-                .addMultipartParameter("educationLevel",request.educationLevel)
-                .addMultipartParameter("educationDetails",request.educationDetails)
-                .addMultipartParameter("localityKey",request.localityKey)
-                .addMultipartParameter("homeAddress",request.homeAddress)
-                .addMultipartParameter("fatherId",request.fatherId)
-                .addMultipartParameter("motherId",request.motherId)
-                .addMultipartParameter("aliveFlag",request.aliveFlag)
-                .addMultipartParameter("profession",request.profession)
-                .addMultipartParameter("profileName",request.profileName)
+                .addMultipartFile("attachmentFile", profileFile)
+                .addMultipartParameter("fullName", request.fullName)
+                .addMultipartParameter("mobileNumber", request.mobileNumber)
+                .addMultipartParameter("dob", request.dob)
+                .addMultipartParameter("email", request.email)
+                .addMultipartParameter("gender", request.gender)
+                .addMultipartParameter("maritalStatus", request.maritalStatus)
+                .addMultipartParameter("lifePartnerId", request.lifeParterId)
+                .addMultipartParameter("educationLevel", request.educationLevel)
+                .addMultipartParameter("educationDetails", request.educationDetails)
+                .addMultipartParameter("localityKey", request.localityKey)
+                .addMultipartParameter("homeAddress", request.homeAddress)
+                .addMultipartParameter("fatherId", request.fatherId)
+                .addMultipartParameter("motherId", request.motherId)
+                .addMultipartParameter("aliveFlag", request.aliveFlag)
+                .addMultipartParameter("profession", request.profession)
+                .addMultipartParameter("profileName", request.profileName)
                 .build().getObjectSingle<AddPersonResponse>(AddPersonResponse::class.java)
     }
 
@@ -97,6 +97,25 @@ class AppApiHelper @Inject constructor(val apiHeader: ApiHeader) : ApiHelper {
                 .addApplicationJsonBody(request)
                 .build()
                 .getObjectSingle<GetDetailedPersonResponse>(GetDetailedPersonResponse::class.java)
+
+    }
+
+    override fun doAddNewsApiCall(request: AddNewsApiBody, newsAttachment: File?): Single<AddNewsResponse> {
+
+        val request1 = Rx2AndroidNetworking.upload(ApiEndPoint.ENDPOINT_ADD_NEWS)
+                .addMultipartParameter("newsTitle", request.newsTitle)
+                .addMultipartParameter("newsDescription", request.newsDescription)
+                .addMultipartParameter("newsDate", request.newsDate)
+                .addMultipartParameter("newsCategory", request.newsCategory)
+                .addMultipartParameter("taggedPersons", request.taggedPersons)
+                .addMultipartParameter("userId", request.userId)
+                .addMultipartParameter("localityId", request.localityId)
+
+        if (newsAttachment != null) {
+            request1.addMultipartFile("newsAttachment", newsAttachment)
+        }
+
+        return request1.build().getObjectSingle(AddNewsResponse::class.java)
 
     }
 }

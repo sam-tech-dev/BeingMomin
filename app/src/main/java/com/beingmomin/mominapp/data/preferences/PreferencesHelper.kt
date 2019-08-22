@@ -11,6 +11,9 @@ interface PreferencesHelper {
     fun setUsername(username: String)
     fun getUsername(): String
 
+    fun setUserId(userid: Int)
+    fun getUserId(): Int
+
 
     fun setIsLoginFlag(flag: Boolean)
     fun getIsLogin(): Boolean
@@ -18,6 +21,9 @@ interface PreferencesHelper {
 
     fun setLocality(locality: String)
     fun getLocality(): String
+
+    fun setLocalityId(localityid: Int)
+    fun getLocalityId(): Int
 
     fun clearAppPreferences()
 

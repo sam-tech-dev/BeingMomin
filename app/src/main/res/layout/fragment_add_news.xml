@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addNews.AddNewsViewModel" />
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="@dimen/dp_8">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_news_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter news title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.beingmomin.mominapp.customs.customEditText.CustomEditTextRegular
+                    android:id="@+id/et_news_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dp_15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_news_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter news description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_news_title">
+
+                <com.beingmomin.mominapp.customs.customEditText.CustomEditTextRegular
+                    android:id="@+id/et_news_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="start"
+                    android:minLines="3"
+                    android:textSize="@dimen/dp_15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:id="@+id/tv_news_date_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Enter date of news"
+                android:textSize="@dimen/font_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_news_description" />
+
+
+            <com.beingmomin.mominapp.customs.customDateSelection.CustomDateSelectionEditText
+                android:id="@+id/dse_news_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:hint="News date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_news_date_title" />
+
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/sp_news_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dse_news_date"
+                app:ms_arrowColor="@color/brown_tint1"
+                app:ms_arrowSize="16dp"
+                app:ms_baseColor="@color/spinner_base_color"
+                app:ms_enableErrorLabel="false"
+                app:ms_enableFloatingLabel="true"
+                app:ms_errorColor="@color/red_dark"
+                app:ms_floatingLabelColor="@color/brown_tint1"
+                app:ms_floatingLabelText="Select Marital Status"
+                app:ms_hint="Select Marital Status"
+                app:ms_hintColor="@color/brown_tint1"
+                app:ms_multiline="false"
+                app:ms_thickness=".5dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_news_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter news category"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sp_news_category">
+
+                <com.beingmomin.mominapp.customs.customPersonSearch.CustomPersonSearchEditText
+                    android:id="@+id/et_news_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:tag="0"
+                    android:textSize="@dimen/dp_15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:id="@+id/tv_tagged_person_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Tag who related with news"
+                android:textSize="@dimen/font_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_news_category" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/fl_tagged_persons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                app:alignContent="stretch"
+                app:alignItems="stretch"
+                app:flexWrap="wrap"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tagged_person_title" />
+
+            <com.beingmomin.mominapp.customs.customPersonSearch.CustomPersonSearchEditText
+                android:id="@+id/pse_tag_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fl_tagged_persons" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_locality_key"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter Locality"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pse_tag_person">
+
+                <com.beingmomin.mominapp.customs.customEditText.CustomEditTextRegular
+                    android:id="@+id/et_locality_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="Bhandera"
+                    android:textSize="@dimen/dp_15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.beingmomin.mominapp.customs.customAppTextViews.CustomAppTextViewRegular
+                android:id="@+id/tv_news_attachment_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="8dp"
+                android:text="Add news attachment (Optional):"
+                android:textSize="@dimen/dp_15"
+                app:layout_constraintBottom_toBottomOf="@+id/bt_browse_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_locality_key" />
+
+
+            <Button
+                android:id="@+id/bt_browse_image"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorSecondary"
+                android:text="Browse"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_12"
+                app:layout_constraintStart_toEndOf="@id/tv_news_attachment_label"
+                app:layout_constraintTop_toBottomOf="@+id/til_locality_key" />
+
+            <ImageView
+                android:id="@+id/iv_news_attachment"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_profile"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_news_attachment_label" />
+
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorPrimary"
+                android:text="Submit"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_news_attachment" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:elevation="2dp"
+                android:indeterminateTint="@color/colorSecondary"
+                android:shadowColor="@color/colorSecondary"
+                android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@+id/bt_submit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bt_submit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</layout>

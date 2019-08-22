@@ -10,7 +10,7 @@ data class SearchPersonResponse(
 
 
 data class Person(
-        @SerializedName("locality") var locality: String,
+        @SerializedName("localityId") var locality: String,
         @SerializedName("father") var father: String,
         @SerializedName("name") var name: String,
         @SerializedName("id") var id: Int

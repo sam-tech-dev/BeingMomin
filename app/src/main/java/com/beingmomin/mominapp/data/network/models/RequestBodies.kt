@@ -17,7 +17,7 @@ data class SignUpApiBody(
 
 data class SearchPersonApiBody(
 		@SerializedName("searchName") var searchName: String,
-		@SerializedName("locality") var locality: String,
+		@SerializedName("localityId") var localityId: Int,
 		@SerializedName("gender") var gender: String
 )
 
@@ -50,6 +50,17 @@ data class GetFamilyHierarchyBody(
 
 data class GetDetailedPersonBody(
 		@SerializedName("personId")var personId:Int
+)
+
+data class AddNewsApiBody(
+		@SerializedName("newsTitle") var newsTitle: String,
+		@SerializedName("newsDescription") var newsDescription: String,
+		@SerializedName("newsDate") var newsDate: String,
+		@SerializedName("newsCategory") var newsCategory: String,
+		@SerializedName("taggedPersons") var taggedPersons: String,
+		@SerializedName("userId") var userId: String,
+		@SerializedName("localityId") var localityId: String
+
 )
 
 

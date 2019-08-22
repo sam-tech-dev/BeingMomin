@@ -14,6 +14,7 @@
 
     <string name="logout">Logout</string>
     <string name="home">Home</string>
+    <string name="add_news">Add News</string>
     <string name="add_person">Add Person</string>
 
     <!--Drawer-->

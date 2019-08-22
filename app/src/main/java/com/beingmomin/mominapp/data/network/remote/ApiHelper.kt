@@ -25,5 +25,6 @@ interface ApiHelper {
 
     fun doGetDetailedPersonApiCall(request: GetDetailedPersonBody): Single<GetDetailedPersonResponse>
 
+    fun doAddNewsApiCall(request: AddNewsApiBody,newsAttachment: File?): Single<AddNewsResponse>
 
 }

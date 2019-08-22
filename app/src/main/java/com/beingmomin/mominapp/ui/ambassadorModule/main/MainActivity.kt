@@ -15,6 +15,7 @@ import com.beingmomin.mominapp.R
 import com.beingmomin.mominapp.ViewModelProviderFactory
 import com.beingmomin.mominapp.databinding.ActivityMainBinding
 import com.beingmomin.mominapp.databinding.NavHeaderMainBinding
+import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addNews.AddNewsFragment
 import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addPerson.AddPersonFragment
 import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.home.HomeFragment
 import com.beingmomin.mominapp.ui.ambassadorModule.signIn.SignInActivity
@@ -108,22 +109,20 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), MainNav
         navigation_view_main.setNavigationItemSelectedListener(this)
     }
 
-    private fun showHomeFragment() {
-        supportFragmentManager
-                .beginTransaction()
-                .addToBackStack(HomeFragment.TAG)
-                .setCustomAnimations(R.anim.slide_left, R.anim.slide_right)
-                .add(R.id.fl_main, HomeFragment.newInstance(), HomeFragment.TAG)
-                .commit()
-    }
 
-    private fun showAddPersonFragment() {
-        supportFragmentManager
-                .beginTransaction()
-                .addToBackStack(AddPersonFragment.TAG)
-                .setCustomAnimations(R.anim.slide_left, R.anim.slide_right)
-                .add(R.id.fl_main, AddPersonFragment.newInstance(), AddPersonFragment.TAG)
-                .commit()
+
+    private fun showFragment(fragmentObj:Fragment,tag:String) {
+            val backStateName = fragmentObj.javaClass.getName()
+            val manager = supportFragmentManager
+            val fragmentPopped = manager.popBackStackImmediate(backStateName, 0)
+
+            if (!fragmentPopped) {
+                val transaction = manager.beginTransaction()
+                transaction.addToBackStack(fragmentObj.javaClass.getSimpleName())
+                        .setCustomAnimations(R.anim.slide_left, R.anim.slide_right)
+                transaction.replace(R.id.fl_main, fragmentObj, backStateName)
+                transaction.commit()
+            }
     }
 
 
@@ -131,16 +130,21 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), MainNav
         drawer_main.closeDrawer(GravityCompat.START)
         when (item.getItemId()) {
             R.id.nav_item_home -> {
-                showHomeFragment()
+                showFragment( HomeFragment.newInstance(), HomeFragment.TAG)
                 return true
             }
             R.id.nav_item_add_person -> {
-                showAddPersonFragment()
+                showFragment(AddPersonFragment.newInstance(),AddPersonFragment.TAG)
                 return true
             }
 
             R.id.nav_item_logout -> {
                 viewModel.processLogOut()
+                return true
+            }
+
+            R.id.nav_item_add_news ->{
+                showFragment(AddNewsFragment.newInstance(),AddPersonFragment.TAG)
                 return true
             }
 

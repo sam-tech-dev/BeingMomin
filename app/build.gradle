@@ -34,22 +34,27 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             buildConfigField("String", "environment", "\"release\"")
-            buildConfigField("String", "BASE_URL", "\"http://data.grampower.com/\"")
-            buildConfigField("String", "API_EXT", "\"v3_field_force/field_force_app/\"")
+            buildConfigField("String", "API_EXT", "\"AmbassadorPortal/\"")
         }
 
     }
 
     flavorDimensions "environment"
     productFlavors {
+
+        production {
+            dimension "environment"
+            buildConfigField("String", "BASE_URL", "\"http://13.127.225.180:8000/\"")
+        }
+
         home {
             dimension "environment"
-            buildConfigField("String", "BASE_URL", "\"http://192.168.8.19:8000/\"")
+            buildConfigField("String", "BASE_URL", "\"http://192.168.2.12:8000/\"")
         }
 
         office {
             dimension "environment"
-            buildConfigField("String", "BASE_URL", "\"http://172.20.5.49:8000/\"")
+            buildConfigField("String", "BASE_URL", "\"http://172.20.5.184:8000/\"")
         }
     }
 }
@@ -58,7 +63,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
     implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
     implementation 'androidx.cardview:cardview:1.0.0-beta01'
     implementation 'com.google.android.material:material:1.0.0-beta01'
@@ -108,6 +112,8 @@ dependencies {
     implementation "com.github.ganfra:material-spinner:$rootProject.materialSpinnerVersion"
 
     implementation 'com.otaliastudios:zoomlayout:1.3.0'
+
+    implementation 'com.google.android:flexbox:1.1.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'

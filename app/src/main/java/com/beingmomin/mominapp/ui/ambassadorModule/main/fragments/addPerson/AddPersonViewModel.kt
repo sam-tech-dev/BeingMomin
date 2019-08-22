@@ -57,7 +57,7 @@ class AddPersonViewModel(val dataManager: DataManager, schedulerProvider: Schedu
     }
 
     fun setLocality() {
-        getNavigator()!!.setLocality(dataManager.getLocality())
+        getNavigator()!!.setLocality(dataManager.getLocality(), dataManager.getLocalityId())
     }
 
     fun getProfileName(ext: String): String {

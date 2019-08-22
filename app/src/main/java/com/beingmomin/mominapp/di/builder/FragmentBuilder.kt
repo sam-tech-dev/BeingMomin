@@ -1,5 +1,6 @@
 package com.beingmomin.mominapp.di.builder
 
+import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addNews.AddNewsFragment
 import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.addPerson.AddPersonFragment
 import com.beingmomin.mominapp.ui.ambassadorModule.main.fragments.home.HomeFragment
 import com.beingmomin.mominapp.ui.appModule.dashboard.fragments.frontMost.FrontMostFragment
@@ -17,6 +18,9 @@ abstract class FragmentBuilder {
 
     @ContributesAndroidInjector
     abstract fun bindAddPersonFragment(): AddPersonFragment
+
+    @ContributesAndroidInjector
+    abstract fun bindAddNewsFragment(): AddNewsFragment
 
     @ContributesAndroidInjector
     abstract fun bindFrontMostFragment(): FrontMostFragment

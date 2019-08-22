@@ -12,7 +12,9 @@ class AppPreferencesHelper @Inject constructor(var appPref: AppPreferences) : Pr
         const val PREF_KEY_ACCESS_TOKEN = "token"
         const val PREF_KEY_IS_LOGIN = "isLogin"
         const val PREF_KEY_USER_NAME = "username"
-        const val PREF_KEY_LOCALITY = "locality"
+        const val PREF_KEY_USER_ID = "userId"
+        const val PREF_KEY_LOCALITY = "localityId"
+        const val PREF_KEY_LOCALITY_ID = "localityId"
     }
 
     override fun setAccessToken(accessToken: String) = appPref.storePreferences(PREF_KEY_ACCESS_TOKEN, accessToken)
@@ -41,6 +43,22 @@ class AppPreferencesHelper @Inject constructor(var appPref: AppPreferences) : Pr
 
     override fun getLocality(): String {
         return appPref.fetchPreferences(PREF_KEY_LOCALITY, "")
+    }
+
+    override fun setUserId(userid: Int) {
+        appPref.storePreferences(PREF_KEY_USER_ID, userid)
+    }
+
+    override fun getUserId(): Int {
+        return appPref.fetchPreferences(PREF_KEY_USER_ID,0)
+    }
+
+    override fun setLocalityId(localityid: Int) {
+        appPref.storePreferences(PREF_KEY_LOCALITY_ID, localityid)
+    }
+
+    override fun getLocalityId(): Int {
+        return appPref.fetchPreferences(PREF_KEY_LOCALITY_ID,0)
     }
 
     override fun clearAppPreferences() = appPref.clearAllPreferences()

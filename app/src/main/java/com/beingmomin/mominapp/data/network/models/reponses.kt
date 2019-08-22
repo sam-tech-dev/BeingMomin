@@ -6,5 +6,9 @@ data class AddPersonResponse(
         @SerializedName("Status") var status: Int
 )
 
+data class AddNewsResponse(
+        @SerializedName("Status") var status: Int
+)
+
 
 
